@@ -145,20 +145,23 @@ export default function Hero({ loading }) {
       {/* Right Side: The ID Badge */}
       <div style={{ position: 'relative', height: '500px', display: 'flex', justifyContent: 'center', pointerEvents: 'auto', zIndex: 10 }}>
         <motion.div
-          initial="initial"
-          animate={animateState}
-          variants={{
-            initial: { y: -1000 },
-            animate: { 
-              y: 0, 
-              transition: { type: "spring", damping: 12, stiffness: 100, mass: 2, delay: 0.2 } 
-            }
+          initial={{ y: -1000, rotate: 0 }}
+          animate={loading ? { y: -1000, rotate: 0 } : { 
+            y: 0, 
+            rotate: [-3, 3, -3] 
           }}
-          whileHover={{ scale: 1.05, transition: { type: 'spring', stiffness: 200 } }}
-          whileTap={{ scale: 1.1, cursor: 'grabbing' }}
-          drag
-          dragConstraints={{ top: 0, left: 0, right: 0, bottom: 0 }}
-          dragElastic={0.6}
+          transition={{
+            y: { type: "spring", damping: 12, stiffness: 100, mass: 2, delay: 0.2 },
+            rotate: { repeat: Infinity, duration: 6, ease: "easeInOut", delay: 1 }
+          }}
+          style={{ transformOrigin: '50% -500px' }}
+        >
+          <motion.div
+            whileHover={{ scale: 1.05, transition: { type: 'spring', stiffness: 200 } }}
+            whileTap={{ scale: 1.1, cursor: 'grabbing' }}
+            drag
+            dragConstraints={{ top: 0, left: 0, right: 0, bottom: 0 }}
+            dragElastic={0.6}
           style={{ 
             x,
             y,
@@ -297,7 +300,7 @@ export default function Hero({ loading }) {
               <div key={i} style={{ width: `${w * 2}px`, background: '#fff', height: '100%', borderRadius: '1px' }}></div>
             ))}
           </div>
-
+        </motion.div>
         </motion.div>
       </div>
 
