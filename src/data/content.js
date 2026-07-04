@@ -1,6 +1,7 @@
 export const content = {
   hero: {
-    name: "Bruce Wayne",
+    name: "Fahat Trongnasuk",
+    alias: "Bruce Wayne",
     tagline: "Digital Innovator | Problem Solver",
   },
   about: {

@@ -255,7 +255,7 @@ export default function Hero({ loading }) {
 
           {/* Badge Info */}
           <div style={{ marginTop: 'auto', textAlign: 'center', width: '100%' }}>
-            <h3 style={{ margin: '0 0 0.5rem 0', fontSize: '1.6rem', color: '#fff', letterSpacing: '1px', fontWeight: '800' }}>{content.hero.name}</h3>
+            <h3 style={{ margin: '0 0 0.5rem 0', fontSize: '1.6rem', color: '#fff', letterSpacing: '1px', fontWeight: '800' }}>{content.hero.alias}</h3>
             <div style={{ width: '100%', height: '1px', background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent)', margin: '0.8rem 0' }}></div>
             <p style={{ margin: 0, fontSize: '0.85rem', color: 'var(--accent-color)', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '2px' }}>
               Future DII 9
