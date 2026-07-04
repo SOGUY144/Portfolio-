@@ -1,6 +1,6 @@
 import React, { useRef, useState, useMemo } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
-import { Stars, Float, MeshDistortMaterial, Environment } from '@react-three/drei';
+import { Stars, Float, Environment } from '@react-three/drei';
 import { EffectComposer, Bloom } from '@react-three/postprocessing';
 import * as THREE from 'three';
 import { SVGLoader } from 'three-stdlib';
@@ -102,31 +102,25 @@ function InteractiveScene() {
 
         {/* Floating Element: Inner Dark Energy Ring */}
         <mesh ref={ring1Ref}>
-          <torusGeometry args={[4.8, 0.12, 16, 100]} />
-          <MeshDistortMaterial 
+          <torusGeometry args={[4.8, 0.1, 16, 64]} />
+          <meshPhysicalMaterial 
             color="#000000" 
-            emissive="#000000"
-            envMapIntensity={2}
-            clearcoat={1}
-            distort={0.5} 
-            speed={5} 
-            roughness={0}
             metalness={1}
+            roughness={0}
+            clearcoat={1}
+            envMapIntensity={2}
           />
         </mesh>
 
         {/* Floating Element: Outer Dark Energy Ring */}
         <mesh ref={ring2Ref} rotation={[Math.PI / 2, 0, 0]}>
-          <torusGeometry args={[5.5, 0.1, 16, 100]} />
-          <MeshDistortMaterial 
+          <torusGeometry args={[5.5, 0.05, 16, 64]} />
+          <meshPhysicalMaterial 
             color="#000000" 
-            emissive="#000000"
-            envMapIntensity={2}
-            clearcoat={1}
-            distort={0.6} 
-            speed={4} 
-            roughness={0}
             metalness={1}
+            roughness={0}
+            clearcoat={1}
+            envMapIntensity={2}
           />
         </mesh>
       </Float>
@@ -148,13 +142,13 @@ export default function Background() {
         <Environment preset="city" />
 
         {/* Dense Starfield serving as our cosmic background */}
-        <Stars radius={100} depth={50} count={8000} factor={4} saturation={1} fade speed={2} />
+        <Stars radius={100} depth={50} count={3000} factor={4} saturation={1} fade speed={1} />
         
         <InteractiveScene />
 
         {/* Post-Processing Effects for the Neon Glow */}
         <EffectComposer disableNormalPass>
-          <Bloom luminanceThreshold={1} mipmapBlur intensity={1.5} />
+          <Bloom luminanceThreshold={1} intensity={1.5} />
         </EffectComposer>
       </Canvas>
     </div>
