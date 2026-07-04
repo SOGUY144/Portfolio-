@@ -43,7 +43,8 @@ export const content = {
       ],
       githubLink: "#",
       liveLink: "https://loop-to-token.vercel.app/",
-      image: "/projects/loop_to_token_real.png"
+      image: "/projects/loop_to_token_real.png",
+      modalImage: "/projects/loop_to_token_modal.png"
     }
   ],
   mindset: {

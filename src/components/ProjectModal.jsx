@@ -175,8 +175,8 @@ export default function ProjectModal({ project, onClose }) {
             position: 'relative',
             overflow: 'hidden'
           }}>
-            {project.image ? (
-              <img src={project.image} alt={project.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+            {(project.modalImage || project.image) ? (
+              <img src={project.modalImage || project.image} alt={project.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
             ) : (
               <div style={{ textAlign: 'center' }}>
                 <div style={{ 
