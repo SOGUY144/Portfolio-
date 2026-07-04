@@ -1,6 +1,6 @@
 export const content = {
   hero: {
-    name: "Your Name",
+    name: "Bruce Wayne",
     tagline: "Digital Innovator | Problem Solver",
   },
   about: {
