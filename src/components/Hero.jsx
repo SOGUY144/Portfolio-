@@ -1,11 +1,20 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, useMotionValue, useTransform } from 'framer-motion';
 import { TypeAnimation } from 'react-type-animation';
 import { content } from '../data/content';
 import GlitchText from './GlitchText';
 
 export default function Hero({ loading }) {
   const animateState = loading ? "initial" : "animate";
+
+  // Physics-like drag values
+  const x = useMotionValue(0);
+  const y = useMotionValue(0);
+  
+  // 3D tilt based on drag position
+  const rotateX = useTransform(y, [-200, 200], [30, -30]);
+  const rotateY = useTransform(x, [-200, 200], [-30, 30]);
+  const rotateZ = useTransform(x, [-200, 200], [-15, 15]);
 
   return (
     <section id="hero" style={{ 
@@ -139,15 +148,24 @@ export default function Hero({ loading }) {
           initial="initial"
           animate={animateState}
           variants={{
-            initial: { y: -1000, rotate: -20 },
+            initial: { y: -1000 },
             animate: { 
               y: 0, 
-              rotate: -5, 
               transition: { type: "spring", damping: 12, stiffness: 100, mass: 2, delay: 0.2 } 
             }
           }}
-          whileHover={{ rotate: 0, scale: 1.05, transition: { type: 'spring', stiffness: 200 } }}
+          whileHover={{ scale: 1.05, transition: { type: 'spring', stiffness: 200 } }}
+          whileTap={{ scale: 1.1, cursor: 'grabbing' }}
+          drag
+          dragConstraints={{ top: 0, left: 0, right: 0, bottom: 0 }}
+          dragElastic={0.6}
           style={{ 
+            x,
+            y,
+            rotateX,
+            rotateY,
+            rotateZ,
+            perspective: 1000,
             position: 'relative',
             width: '300px',
             height: '450px',
