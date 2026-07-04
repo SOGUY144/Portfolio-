@@ -7,7 +7,6 @@ import Mindset from './components/Mindset';
 import Contact from './components/Contact';
 import Background from './components/Background';
 import Preloader from './components/Preloader';
-import CustomCursor from './components/CustomCursor';
 import MusicPlayer from './components/MusicPlayer';
 
 function App() {
@@ -15,7 +14,6 @@ function App() {
 
   return (
     <>
-      <CustomCursor />
       <Preloader onComplete={() => setLoading(false)} />
       <Background />
       <MusicPlayer />

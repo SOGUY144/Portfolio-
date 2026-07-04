@@ -15,11 +15,6 @@ body {
   overflow-x: hidden;
   scroll-behavior: smooth;
   background-color: #050510;
-  cursor: none;
-}
-
-a, button, input, textarea {
-  cursor: none !important;
 }
 
 * {

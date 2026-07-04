@@ -74,7 +74,6 @@ export default function GlitchText({ text }) {
         display: 'inline-block',
         position: 'relative',
         color: 'inherit',
-        cursor: 'none',
         pointerEvents: 'auto'
       }}
     >
