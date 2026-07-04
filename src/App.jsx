@@ -9,6 +9,8 @@ import Background from './components/Background';
 import Preloader from './components/Preloader';
 import MusicPlayer from './components/MusicPlayer';
 import BatSignal from './components/BatSignal';
+import CustomCursor from './components/CustomCursor';
+import ScrollProgress from './components/ScrollProgress';
 
 function App() {
   const [loading, setLoading] = React.useState(true);
@@ -19,6 +21,8 @@ function App() {
       <Background />
       <MusicPlayer />
       <BatSignal />
+      <CustomCursor />
+      <ScrollProgress />
       <div style={{ position: 'relative', zIndex: 1 }}>
         <Navbar />
         <Hero loading={loading} />
