@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Icon } from '@iconify/react';
 import { content } from '../data/content';
+import ProjectModal from './ProjectModal';
 
 // Mapping exact icon names for Tech Stack
 const iconMap = {
@@ -19,6 +20,7 @@ const iconMap = {
 
 export default function Projects() {
   const [activeTab, setActiveTab] = useState('Projects');
+  const [selectedProjectId, setSelectedProjectId] = useState(null);
   const tabs = ['Projects', 'Certificates', 'Tech Stack'];
 
   return (
@@ -63,6 +65,16 @@ export default function Projects() {
         </div>
       </div>
 
+      {/* Modal Overlay */}
+      <AnimatePresence>
+        {selectedProjectId !== null && (
+          <ProjectModal 
+            project={content.projects.find(p => p.id === selectedProjectId)} 
+            onClose={() => setSelectedProjectId(null)} 
+          />
+        )}
+      </AnimatePresence>
+
       {/* Dynamic Content Areas */}
       <div style={{ minHeight: '500px' }}>
         <AnimatePresence mode="wait">
@@ -98,10 +110,8 @@ export default function Projects() {
                   <div style={{ padding: '2.5rem', flex: 1, display: 'flex', flexDirection: 'column' }}>
                     <h3 style={{ color: '#fff', fontSize: '1.6rem', fontWeight: '800', margin: '0 0 1rem 0' }}>{proj.title}</h3>
                     <p style={{ color: '#94a3b8', fontSize: '1rem', lineHeight: '1.6', marginBottom: '2rem', flex: 1 }}>{proj.success}</p>
-                    <motion.a 
-                      href={proj.link || "#"}
-                      target={proj.link ? "_blank" : "_self"}
-                      rel="noopener noreferrer"
+                    <motion.button 
+                      onClick={() => setSelectedProjectId(proj.id)}
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                       style={{ 
@@ -125,7 +135,7 @@ export default function Projects() {
                       onMouseOut={(e) => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = 'var(--accent-color)'; }}
                     >
                       View Mission <span>→</span>
-                    </motion.a>
+                    </motion.button>
                   </div>
                 </motion.div>
               ))}

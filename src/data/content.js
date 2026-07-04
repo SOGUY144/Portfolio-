@@ -15,14 +15,34 @@ export const content = {
       success: "A robust dashboard application hosted on Vercel for monitoring and analytics.",
       failure: "Faced challenges with deployment and responsive design initially.",
       learning: "Learned the intricacies of modern web deployment and mobile-first design.",
-      link: "https://slip-sense-gamma.vercel.app/dashboard"
+      description: "Slip Sense is a comprehensive analytics dashboard designed to monitor transactions and verify payment slips in real-time. It features a modern, responsive UI built with cutting-edge web technologies, ensuring seamless access across all devices.",
+      technologies: ["React.js", "Tailwind", "Next.js"],
+      features: [
+        "Real-time transaction monitoring",
+        "Responsive and elegant design",
+        "Comprehensive analytics charts",
+        "Secure user authentication"
+      ],
+      githubLink: "#",
+      liveLink: "https://slip-sense-gamma.vercel.app/dashboard",
+      image: "" // Placeholder for future image/video
     },
     {
       id: 2,
       title: "Business Idea: TechLink",
       success: "Pitched a business model for a new tech platform.",
       failure: "Struggled with market validation early on due to assumptions.",
-      learning: "Realized the value of talking to real users before writing code."
+      learning: "Realized the value of talking to real users before writing code.",
+      description: "TechLink is a conceptual platform aimed at bridging the gap between freelance developers and startups. The pitch focused on creating a decentralized marketplace with verified skill badges.",
+      technologies: ["Figma", "Business Model Canvas", "Pitch Deck"],
+      features: [
+        "Verified skill matching",
+        "Escrow payment system",
+        "Integrated portfolio viewer"
+      ],
+      githubLink: "#",
+      liveLink: "#",
+      image: ""
     }
   ],
   mindset: {
