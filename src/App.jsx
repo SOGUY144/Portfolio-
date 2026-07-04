@@ -8,6 +8,7 @@ import Contact from './components/Contact';
 import Background from './components/Background';
 import Preloader from './components/Preloader';
 import MusicPlayer from './components/MusicPlayer';
+import BatSignal from './components/BatSignal';
 
 function App() {
   const [loading, setLoading] = React.useState(true);
@@ -17,6 +18,7 @@ function App() {
       <Preloader onComplete={() => setLoading(false)} />
       <Background />
       <MusicPlayer />
+      <BatSignal />
       <div style={{ position: 'relative', zIndex: 1 }}>
         <Navbar />
         <Hero loading={loading} />
