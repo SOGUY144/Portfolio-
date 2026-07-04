@@ -84,8 +84,8 @@ export default function Projects() {
                   </div>
                   {/* Content */}
                   <div style={{ padding: '2rem' }}>
-                    <h3 style={{ color: '#fff', fontSize: '1.4rem', margin: '0 0 1rem 0', textShadow: '0 0 5px #38bdf8, 0 0 10px #38bdf8, 0 0 20px #38bdf8' }}>{proj.title}</h3>
-                    <p style={{ color: '#e0f2fe', fontSize: '0.95rem', lineHeight: '1.6', marginBottom: '1.5rem', textShadow: '0 0 5px rgba(56, 189, 248, 0.5)' }}>{proj.success}</p>
+                    <h3 style={{ color: '#fff', fontSize: '1.4rem', margin: '0 0 1rem 0' }}>{proj.title}</h3>
+                    <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', lineHeight: '1.6', marginBottom: '1.5rem' }}>{proj.success}</p>
                     <button style={{ 
                       background: 'transparent', border: '1px solid #ffea00', padding: '0.8rem 1.5rem', borderRadius: '50px', color: '#ffea00', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '10px', transition: 'all 0.3s ease', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '1px'
                     }} onMouseOver={(e) => { e.currentTarget.style.background = '#ffea00'; e.currentTarget.style.color = '#000'; }} onMouseOut={(e) => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = '#ffea00'; }}>
@@ -115,7 +115,7 @@ export default function Projects() {
                     <span style={{ color: '#333' }}>[Certificate Image]</span>
                   </div>
                   <div style={{ padding: '1.5rem 1rem 0.5rem 1rem', textAlign: 'center' }}>
-                    <h3 style={{ color: '#fff', fontSize: '1.2rem', margin: '0 0 0.5rem 0', textShadow: '0 0 5px #38bdf8, 0 0 10px #38bdf8, 0 0 20px #38bdf8' }}>{cert.title}</h3>
+                    <h3 style={{ color: '#fff', fontSize: '1.2rem', margin: '0 0 0.5rem 0' }}>{cert.title}</h3>
                     <p style={{ color: '#ffea00', fontSize: '0.9rem', margin: 0, textTransform: 'uppercase', letterSpacing: '1px', fontWeight: 'bold' }}>{cert.issuer} • {cert.date}</p>
                   </div>
                 </div>
@@ -148,7 +148,7 @@ export default function Projects() {
                   }}
                 >
                   <Icon icon={iconMap[tech.name] || "logos:react"} width="70" height="70" style={{ marginBottom: '1.5rem' }} />
-                  <span style={{ color: '#fff', fontWeight: '600', fontSize: '1.1rem', textShadow: '0 0 5px #38bdf8, 0 0 10px #38bdf8, 0 0 20px #38bdf8' }}>{tech.name}</span>
+                  <span style={{ color: '#fff', fontWeight: '600', fontSize: '1.1rem' }}>{tech.name}</span>
                 </motion.div>
               ))}
             </motion.div>
