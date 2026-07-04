@@ -25,7 +25,7 @@ export const content = {
       ],
       githubLink: "#",
       liveLink: "https://slip-sense-gamma.vercel.app/dashboard",
-      image: "" // Placeholder for future image/video
+      image: "/projects/slip_sense.png"
     },
     {
       id: 2,
