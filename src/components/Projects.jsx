@@ -102,9 +102,22 @@ export default function Projects() {
                   onMouseOver={(e) => e.currentTarget.style.border = '1px solid rgba(255, 234, 0, 0.5)'}
                   onMouseOut={(e) => e.currentTarget.style.border = '1px solid rgba(255, 255, 255, 0.05)'}
                 >
-                  {/* Image Placeholder */}
-                  <div style={{ height: '220px', background: 'linear-gradient(135deg, rgba(0,0,0,0.8), rgba(20,20,30,0.8))', display: 'flex', alignItems: 'center', justifyContent: 'center', borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
-                    <span style={{ color: '#475569', fontWeight: '600', letterSpacing: '1px', textTransform: 'uppercase' }}>[Project Snapshot]</span>
+                  {/* Image Placeholder or Actual Image */}
+                  <div style={{ 
+                    height: '220px', 
+                    background: 'linear-gradient(135deg, rgba(0,0,0,0.8), rgba(20,20,30,0.8))', 
+                    display: 'flex', 
+                    alignItems: 'center', 
+                    justifyContent: 'center', 
+                    borderBottom: '1px solid rgba(255,255,255,0.05)',
+                    position: 'relative',
+                    overflow: 'hidden'
+                  }}>
+                    {proj.image ? (
+                      <img src={proj.image} alt={proj.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                    ) : (
+                      <span style={{ color: '#475569', fontWeight: '600', letterSpacing: '1px', textTransform: 'uppercase' }}>[Project Snapshot]</span>
+                    )}
                   </div>
                   {/* Content */}
                   <div style={{ padding: '2.5rem', flex: 1, display: 'flex', flexDirection: 'column' }}>
