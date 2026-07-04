@@ -29,8 +29,9 @@ export const content = {
     techInterest: "I'm currently fascinated by AI integrations in daily workflows and how they improve productivity for non-technical users."
   },
   contact: {
-    email: "you@example.com",
-    github: "github.com/yourusername",
+    github: "https://github.com/SOGUY144",
+    instagram: "https://www.instagram.com/g_oshand/?hl=en",
+    facebook: "https://www.facebook.com/fahat.ntr/?locale=th_TH"
   },
   certificates: [
     {
