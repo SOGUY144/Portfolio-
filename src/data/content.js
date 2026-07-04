@@ -29,19 +29,20 @@ export const content = {
     },
     {
       id: 2,
-      title: "Business Idea: TechLink",
-      success: "Pitched a business model for a new tech platform.",
-      failure: "Struggled with market validation early on due to assumptions.",
-      learning: "Realized the value of talking to real users before writing code.",
-      description: "TechLink is a conceptual platform aimed at bridging the gap between freelance developers and startups. The pitch focused on creating a decentralized marketplace with verified skill badges.",
-      technologies: ["Figma", "Business Model Canvas", "Pitch Deck"],
+      title: "Loop to Token",
+      success: "Successfully deployed a decentralized or token-based web application.",
+      failure: "Encountered state management complexities during the initial build phase.",
+      learning: "Gained deep insights into tokenomics integration and scalable web architecture.",
+      description: "Loop to Token is an innovative web application designed to handle token transactions and reward loops. Built with a focus on seamless user experience, it features real-time data updates and a highly responsive interface.",
+      technologies: ["React", "Vite", "Tailwind", "Web3"],
       features: [
-        "Verified skill matching",
-        "Escrow payment system",
-        "Integrated portfolio viewer"
+        "Token conversion mechanics",
+        "Real-time transaction tracking",
+        "Modern glassmorphism UI",
+        "Responsive cross-device design"
       ],
       githubLink: "#",
-      liveLink: "#",
+      liveLink: "https://loop-to-token.vercel.app/",
       image: ""
     }
   ],
