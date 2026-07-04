@@ -183,7 +183,7 @@ export default function Contact() {
           >
             {isSubmitting ? 'Transmitting...' : (isSubmitted ? 'Transmission Sent! ✓' : 'Send Message')}
           </motion.button>
-
+        </form>
         </motion.div>
       </div>
     </section>
