@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 const CHARS = '!@#$%^&*()_+|}{[]:;?><,./-=0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
 
 export default function GlitchText({ text }) {
-  const [displayText, setDisplayText] = useState(text);
+  const [displayText, setDisplayText] = useState(text.split('').map(char => ({ char, isGlitched: false })));
   const [isHovered, setIsHovered] = useState(false);
 
   const [isAutoGlitching, setIsAutoGlitching] = useState(false);
@@ -32,18 +32,16 @@ export default function GlitchText({ text }) {
           text
             .split('')
             .map((char) => {
-              if (char === ' ') return ' '; // Keep spaces intact
-              // 30% chance to scramble a character
+              if (char === ' ') return { char: ' ', isGlitched: false };
               if (Math.random() < 0.3) {
-                return CHARS[Math.floor(Math.random() * CHARS.length)];
+                return { char: CHARS[Math.floor(Math.random() * CHARS.length)], isGlitched: true };
               }
-              return char;
+              return { char, isGlitched: false };
             })
-            .join('')
         );
       }, 50);
     } else {
-      setDisplayText(text);
+      setDisplayText(text.split('').map(char => ({ char, isGlitched: false })));
       if (intervalId) clearInterval(intervalId);
     }
 
@@ -77,7 +75,11 @@ export default function GlitchText({ text }) {
         pointerEvents: 'auto'
       }}
     >
-      {displayText}
+      {displayText.map((item, i) => (
+        <span key={i} style={{ color: item.isGlitched ? 'var(--accent-color)' : 'inherit' }}>
+          {item.char}
+        </span>
+      ))}
     </motion.span>
   );
 }
