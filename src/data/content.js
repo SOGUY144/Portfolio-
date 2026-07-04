@@ -45,6 +45,24 @@ export const content = {
       liveLink: "https://loop-to-token.vercel.app/",
       image: "/projects/loop_to_token_real.png",
       modalImage: "/projects/loop_to_token_modal.png"
+    },
+    {
+      id: 3,
+      title: "RouteWise AI",
+      success: "Successfully developed a smart route optimization system with AI.",
+      failure: "Faced challenges in integrating the map API with AI routing algorithms.",
+      learning: "Mastered geospatial data handling and AI-driven route calculations.",
+      description: "RouteWise AI is a smart route system designed for delivery teams. It integrates intelligent mapping and AI suggestions to optimize travel paths, reducing time and fuel consumption.",
+      technologies: ["React", "Map API", "AI Integration", "Tailwind"],
+      features: [
+        "Smart route optimization",
+        "Interactive mapping interface",
+        "AI-powered destination suggestions",
+        "Real-time driver tracking"
+      ],
+      githubLink: "#",
+      liveLink: "https://routewise-aii-1ket.vercel.app/",
+      image: "/projects/routewise.png"
     }
   ],
   mindset: {
