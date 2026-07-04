@@ -146,25 +146,25 @@ function SweepingLights() {
     <group ref={groupRef} position={[0, -5, -5]}>
       <SpotLight 
         position={[-10, 10, 0]} 
-        angle={0.2} 
+        angle={0.6} 
         penumbra={0.5} 
-        intensity={2} 
+        intensity={3} 
         color="#ffea00" 
-        distance={40} 
+        distance={60} 
         attenuation={5} 
-        anglePower={5}
-        opacity={0.3}
+        anglePower={4}
+        opacity={0.4}
       />
       <SpotLight 
         position={[10, 10, 0]} 
-        angle={0.15} 
+        angle={0.5} 
         penumbra={0.5} 
-        intensity={1.5} 
+        intensity={2.5} 
         color="#ffffff" 
-        distance={40} 
+        distance={60} 
         attenuation={5} 
-        anglePower={5}
-        opacity={0.2}
+        anglePower={4}
+        opacity={0.3}
       />
     </group>
   );
