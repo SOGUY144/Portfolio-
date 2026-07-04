@@ -33,21 +33,45 @@ export const content = {
   certificates: [
     {
       id: 1,
-      title: "Certificate of Completion - React Masterclass",
-      issuer: "Udemy",
-      date: "August 2025"
+      title: "IT CLASH 69 (Multimedia Track)",
+      issuer: "KMITL",
+      date: "2026",
+      image: "/certificates/Certificate-ฟาฮัส ทรงนาศึก-IT CLASH 69 กิจกรรมการแข่งขันทักษะทางวิชาการ ความเชี่ยวชาญ และความคิดสร้างสรรค์ทางด้าน IT เข้าร่วมรอบชิงชนะเลิศ (Multimedia Track) (2).jpg"
     },
     {
       id: 2,
-      title: "Google UX Design Professional Certificate",
-      issuer: "Coursera",
-      date: "December 2025"
+      title: "Certificate 2",
+      issuer: "Issuer",
+      date: "2026",
+      image: "/certificates/Fahat_TSJ2026 (1).png"
     },
     {
       id: 3,
-      title: "Frontend Developer Certificate",
-      issuer: "FreeCodeCamp",
-      date: "May 2025"
+      title: "Certificate 3",
+      issuer: "Issuer",
+      date: "2026",
+      image: "/certificates/Screenshot 2026-07-04 183830.png"
+    },
+    {
+      id: 4,
+      title: "Certificate 4",
+      issuer: "Issuer",
+      date: "2026",
+      image: "/certificates/a_a_2a_-a_a_2a_a_a_a-a_a_a_a_a_2a_a_a_ (1).png"
+    },
+    {
+      id: 5,
+      title: "Certificate 5",
+      issuer: "Issuer",
+      date: "2026",
+      image: "/certificates/temp_Fahat_GGJ2026 Certificate (1) (2).png"
+    },
+    {
+      id: 6,
+      title: "Certificate 6",
+      issuer: "Issuer",
+      date: "2026",
+      image: "/certificates/ได้ที่2.png"
     }
   ],
   techStack: [

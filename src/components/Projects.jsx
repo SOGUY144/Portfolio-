@@ -108,11 +108,15 @@ export default function Projects() {
                 <div key={cert.id} style={{ 
                   background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '24px', padding: '1rem', display: 'flex', flexDirection: 'column' 
                 }}>
-                  {/* Landscape Image Placeholder */}
+                  {/* Landscape Image */}
                   <div style={{ 
-                    height: '250px', background: '#0a0a0a', borderRadius: '16px', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px solid rgba(255,234,0,0.1)' 
+                    height: '250px', background: '#0a0a0a', borderRadius: '16px', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px solid rgba(255,234,0,0.1)', overflow: 'hidden'
                   }}>
-                    <span style={{ color: '#333' }}>[Certificate Image]</span>
+                    {cert.image ? (
+                      <img src={cert.image} alt={cert.title} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+                    ) : (
+                      <span style={{ color: '#333' }}>[Certificate Image]</span>
+                    )}
                   </div>
                   <div style={{ padding: '1.5rem 1rem 0.5rem 1rem', textAlign: 'center' }}>
                     <h3 style={{ color: '#fff', fontSize: '1.2rem', margin: '0 0 0.5rem 0' }}>{cert.title}</h3>
