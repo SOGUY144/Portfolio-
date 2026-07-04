@@ -53,9 +53,10 @@ function InteractiveScene() {
 
     // 3. Hover Distortion & Color Morphing on the main shape (Batman Logo)
     if (sphereRef.current) {
-      // Base rotation (add Math.PI to X to flip it right-side up)
-      sphereRef.current.rotation.x = Math.PI + (t * 0.1);
-      sphereRef.current.rotation.y = t * 0.15;
+      // Base rotation (Math.PI to flip it right-side up, fixed X axis so it stays straight)
+      sphereRef.current.rotation.x = Math.PI;
+      // Spin only on Y axis
+      sphereRef.current.rotation.y = t * 0.3;
       
       // Scale up the bat so it's much more prominent
       sphereRef.current.scale.setScalar(THREE.MathUtils.lerp(sphereRef.current.scale.x, hovered ? 0.45 : 0.35, 0.1));
