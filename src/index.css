@@ -15,15 +15,10 @@ body {
   overflow-x: hidden;
   scroll-behavior: smooth;
   background-color: #050510;
-  cursor: none;
 }
 
 * {
   box-sizing: border-box;
-}
-
-a, button, .glass {
-  cursor: none !important;
 }
 
 .glass {
