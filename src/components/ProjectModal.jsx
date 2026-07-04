@@ -93,46 +93,50 @@ export default function ProjectModal({ project, onClose }) {
 
           {/* Links */}
           <div style={{ display: 'flex', gap: '1.5rem' }}>
-            <a 
-              href={project.githubLink !== "#" ? project.githubLink : null} 
-              target="_blank" 
-              rel="noopener noreferrer"
-              style={{
-                flex: 1,
-                padding: '1rem',
-                textAlign: 'center',
-                borderRadius: '50px',
-                border: '1px solid rgba(255,255,255,0.2)',
-                color: project.githubLink !== "#" ? '#fff' : '#475569',
-                textDecoration: 'none',
-                fontWeight: '600',
-                cursor: project.githubLink !== "#" ? 'pointer' : 'not-allowed',
-                background: 'rgba(255,255,255,0.02)'
-              }}
-            >
-              {project.githubLink !== "#" ? "GitHub Repo" : "No Link"}
-            </a>
-            <a 
-              href={project.liveLink !== "#" ? project.liveLink : null} 
-              target="_blank" 
-              rel="noopener noreferrer"
-              style={{
-                flex: 1,
-                padding: '1rem',
-                textAlign: 'center',
-                borderRadius: '50px',
-                border: '1px solid var(--accent-color)',
-                color: project.liveLink !== "#" ? '#000' : '#475569',
-                background: project.liveLink !== "#" ? 'var(--accent-color)' : 'transparent',
-                borderColor: project.liveLink !== "#" ? 'var(--accent-color)' : 'rgba(255,255,255,0.2)',
-                textDecoration: 'none',
-                fontWeight: '800',
-                textTransform: 'uppercase',
-                cursor: project.liveLink !== "#" ? 'pointer' : 'not-allowed'
-              }}
-            >
-              {project.liveLink !== "#" ? "Live Site" : "No Link"}
-            </a>
+            {project.githubLink && project.githubLink !== "#" && (
+              <a 
+                href={project.githubLink} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                style={{
+                  flex: 1,
+                  padding: '1rem',
+                  textAlign: 'center',
+                  borderRadius: '50px',
+                  border: '1px solid rgba(255,255,255,0.2)',
+                  color: '#fff',
+                  textDecoration: 'none',
+                  fontWeight: '600',
+                  cursor: 'pointer',
+                  background: 'rgba(255,255,255,0.02)'
+                }}
+              >
+                GitHub Repo
+              </a>
+            )}
+            
+            {project.liveLink && project.liveLink !== "#" && (
+              <a 
+                href={project.liveLink} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                style={{
+                  flex: 1,
+                  padding: '1rem',
+                  textAlign: 'center',
+                  borderRadius: '50px',
+                  border: '1px solid var(--accent-color)',
+                  color: '#000',
+                  background: 'var(--accent-color)',
+                  textDecoration: 'none',
+                  fontWeight: '800',
+                  textTransform: 'uppercase',
+                  cursor: 'pointer'
+                }}
+              >
+                Live Site
+              </a>
+            )}
           </div>
 
           {/* Technologies Tags */}
