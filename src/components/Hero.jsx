@@ -91,11 +91,11 @@ export default function Hero({ loading }) {
             sequence={[
               content.hero.tagline,
               1000,
-              'Digital Innovator.',
+              'Software Developer.',
               1000,
-              'Problem Solver.',
+              'Game Developer.',
               1000,
-              'Future DII Student.',
+              'Creative Coder.',
               1000
             ]}
             wrapper="span"

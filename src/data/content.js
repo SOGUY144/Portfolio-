@@ -1,8 +1,9 @@
 export const content = {
   hero: {
+    title: "Hi, I'm",
     name: "Fahat Trongnasuk",
     alias: "Bruce Wayne",
-    tagline: "Digital Innovator | Problem Solver",
+    tagline: "Software Developer | Tech Enthusiast",
   },
   about: {
     story: "I am passionate about technology and solving real-world problems. I want to join DII Batch 9 because I believe in continuous learning and applying digital solutions to create meaningful impact.",
