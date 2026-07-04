@@ -63,6 +63,24 @@ export const content = {
       githubLink: "#",
       liveLink: "https://routewise-aii-1ket.vercel.app/",
       image: "/projects/routewise.png"
+    },
+    {
+      id: 4,
+      title: "The Coming of Stages",
+      success: "Developed an engaging event enrollment platform for musicals.",
+      failure: "Handled complex ticketing and user registration flows under high traffic.",
+      learning: "Improved performance optimization and robust authentication systems.",
+      description: "The Coming of Stages is a dedicated enrollment and event management platform for the 'Hopemaker in Bloom' musical festival. It provides seamless ticket booking, QR code generation, and user account management.",
+      technologies: ["React", "Next.js", "Tailwind", "Node.js"],
+      features: [
+        "Event enrollment & ticketing",
+        "QR Code generation for tickets",
+        "Secure user authentication",
+        "Real-time availability tracking"
+      ],
+      githubLink: "#",
+      liveLink: "https://enroll.thecomingofstages.com/",
+      image: "/projects/coming_of_stages.png"
     }
   ],
   mindset: {
