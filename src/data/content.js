@@ -80,7 +80,8 @@ export const content = {
       ],
       githubLink: "#",
       liveLink: "https://enroll.thecomingofstages.com/",
-      image: "/projects/coming_of_stages.png"
+      image: "/projects/coming_of_stages.png",
+      modalImage: "/projects/coming_of_stages_modal.png"
     }
   ],
   mindset: {
