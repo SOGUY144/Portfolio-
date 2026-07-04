@@ -1,7 +1,7 @@
 import React, { useRef, useState, useMemo } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { Stars, Float, Environment } from '@react-three/drei';
-import { EffectComposer, Bloom } from '@react-three/postprocessing';
+
 import * as THREE from 'three';
 import { SVGLoader } from 'three-stdlib';
 
@@ -87,8 +87,8 @@ function InteractiveScene() {
                 bevelEnabled: true, 
                 bevelThickness: 0.2, 
                 bevelSize: 0.1, 
-                bevelSegments: 4, 
-                curveSegments: 24 
+                bevelSegments: 2, 
+                curveSegments: 12 
               }]} 
               onUpdate={(self) => self.center()}
             />
@@ -142,15 +142,10 @@ export default function Background() {
         
         <Environment preset="city" />
 
-        {/* Dense Starfield serving as our cosmic background */}
-        <Stars radius={100} depth={50} count={3000} factor={4} saturation={1} fade speed={1} />
+        {/* Optimized Starfield serving as our cosmic background */}
+        <Stars radius={100} depth={50} count={1000} factor={4} saturation={1} fade speed={1} />
         
         <InteractiveScene />
-
-        {/* Post-Processing Effects for the Neon Glow */}
-        <EffectComposer disableNormalPass>
-          <Bloom luminanceThreshold={1} intensity={1.5} />
-        </EffectComposer>
       </Canvas>
     </div>
   );
