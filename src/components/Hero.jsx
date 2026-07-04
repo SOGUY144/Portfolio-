@@ -64,7 +64,8 @@ export default function Hero({ loading }) {
             position: 'relative',
             display: 'inline-block',
             marginTop: '0.2em',
-            textShadow: '0 0 20px rgba(255, 255, 255, 0.3)'
+            textShadow: '0 0 20px rgba(255, 255, 255, 0.3)',
+            fontFamily: "'Cinzel', serif"
           }}>
             <GlitchText text={content.hero.name} />
           </span>
