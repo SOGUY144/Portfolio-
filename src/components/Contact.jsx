@@ -127,7 +127,7 @@ export default function Contact() {
               borderRadius: '12px',
               fontSize: '1.1rem',
               fontWeight: '700',
-              cursor: isSubmitting ? 'not-allowed' : 'none', 
+              cursor: isSubmitting ? 'not-allowed' : 'pointer',
               boxShadow: isSubmitted 
                 ? '0 0 20px rgba(16, 185, 129, 0.6)' 
                 : (isSubmitting ? 'none' : '0 0 20px rgba(56, 189, 248, 0.4)'),

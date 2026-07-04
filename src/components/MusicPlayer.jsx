@@ -67,7 +67,7 @@ export default function MusicPlayer() {
         width: 10px;
         border-radius: 50%;
         background: #fff;
-        cursor: none;
+        cursor: pointer;
         margin-top: -3px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
         box-shadow: 0 0 5px rgba(0,0,0,0.3);
       }
@@ -76,7 +76,7 @@ export default function MusicPlayer() {
         width: 10px;
         border-radius: 50%;
         background: #fff;
-        cursor: none;
+        cursor: pointer;
         border: none;
         box-shadow: 0 0 5px rgba(0,0,0,0.3);
       }
@@ -157,7 +157,7 @@ export default function MusicPlayer() {
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              cursor: 'none',
+              cursor: 'pointer',
               outline: 'none',
               marginLeft: '10px'
             }}
@@ -188,7 +188,7 @@ export default function MusicPlayer() {
                 background: `linear-gradient(to right, #fff ${progress}%, #334155 ${progress}%)`,
                 borderRadius: '2px',
                 outline: 'none',
-                cursor: 'none',
+                cursor: 'pointer',
                 margin: 0
               }}
             />
