@@ -1,6 +1,6 @@
 import React, { useRef, useState, useMemo } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
-import { Stars, Float, Environment, Sparkles } from '@react-three/drei';
+import { Stars, Float, Environment, Sparkles, SpotLight } from '@react-three/drei';
 
 import * as THREE from 'three';
 import { SVGLoader } from 'three-stdlib';
@@ -143,11 +143,29 @@ function SweepingLights() {
   });
 
   return (
-    <group ref={groupRef} position={[0, -10, 2]}>
-      {/* Spotlight 1: Yellow Bat-signal style */}
-      <spotLight position={[-5, 0, 0]} angle={0.4} penumbra={1} intensity={5} color="#ffea00" distance={30} />
-      {/* Spotlight 2: White Police style */}
-      <spotLight position={[5, 0, 0]} angle={0.3} penumbra={1} intensity={4} color="#ffffff" distance={30} />
+    <group ref={groupRef} position={[0, -5, -5]}>
+      <SpotLight 
+        position={[-10, 10, 0]} 
+        angle={0.2} 
+        penumbra={0.5} 
+        intensity={2} 
+        color="#ffea00" 
+        distance={40} 
+        attenuation={5} 
+        anglePower={5}
+        opacity={0.3}
+      />
+      <SpotLight 
+        position={[10, 10, 0]} 
+        angle={0.15} 
+        penumbra={0.5} 
+        intensity={1.5} 
+        color="#ffffff" 
+        distance={40} 
+        attenuation={5} 
+        anglePower={5}
+        opacity={0.2}
+      />
     </group>
   );
 }
