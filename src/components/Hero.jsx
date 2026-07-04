@@ -247,8 +247,11 @@ export default function Hero({ loading }) {
                 width: '100%', 
                 height: '100%', 
                 objectFit: 'cover', 
+                objectPosition: 'center',
                 filter: 'grayscale(70%) contrast(110%) brightness(90%)',
-                opacity: 0.9
+                opacity: 0.9,
+                transform: 'scale(1.6)', // Zoom in to hide black bars
+                transformOrigin: 'center'
               }} 
             />
           </div>
