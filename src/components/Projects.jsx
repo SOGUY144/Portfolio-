@@ -75,24 +75,55 @@ export default function Projects() {
               style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '2rem' }}
             >
               {content.projects.map(proj => (
-                <div key={proj.id} style={{ 
-                  background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '24px', overflow: 'hidden' 
-                }}>
+                <motion.div 
+                  key={proj.id} 
+                  whileHover={{ y: -10, boxShadow: '0 20px 40px rgba(255, 234, 0, 0.2)' }}
+                  style={{ 
+                    background: 'rgba(15, 23, 42, 0.4)', 
+                    border: '1px solid rgba(255, 255, 255, 0.05)', 
+                    borderRadius: '24px', 
+                    overflow: 'hidden',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    transition: 'border 0.3s'
+                  }}
+                  onMouseOver={(e) => e.currentTarget.style.border = '1px solid rgba(255, 234, 0, 0.5)'}
+                  onMouseOut={(e) => e.currentTarget.style.border = '1px solid rgba(255, 255, 255, 0.05)'}
+                >
                   {/* Image Placeholder */}
-                  <div style={{ height: '200px', background: 'rgba(0,0,0,0.4)', display: 'flex', alignItems: 'center', justifyContent: 'center', borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
-                    <span style={{ color: '#475569' }}>[Project Screenshot]</span>
+                  <div style={{ height: '220px', background: 'linear-gradient(135deg, rgba(0,0,0,0.8), rgba(20,20,30,0.8))', display: 'flex', alignItems: 'center', justifyContent: 'center', borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
+                    <span style={{ color: '#475569', fontWeight: '600', letterSpacing: '1px', textTransform: 'uppercase' }}>[Project Snapshot]</span>
                   </div>
                   {/* Content */}
-                  <div style={{ padding: '2rem' }}>
-                    <h3 style={{ color: '#fff', fontSize: '1.4rem', margin: '0 0 1rem 0' }}>{proj.title}</h3>
-                    <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', lineHeight: '1.6', marginBottom: '1.5rem' }}>{proj.success}</p>
-                    <button style={{ 
-                      background: 'transparent', border: '1px solid #ffea00', padding: '0.8rem 1.5rem', borderRadius: '50px', color: '#ffea00', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '10px', transition: 'all 0.3s ease', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '1px'
-                    }} onMouseOver={(e) => { e.currentTarget.style.background = '#ffea00'; e.currentTarget.style.color = '#000'; }} onMouseOut={(e) => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = '#ffea00'; }}>
-                      Details <span>→</span>
-                    </button>
+                  <div style={{ padding: '2.5rem', flex: 1, display: 'flex', flexDirection: 'column' }}>
+                    <h3 style={{ color: '#fff', fontSize: '1.6rem', fontWeight: '800', margin: '0 0 1rem 0' }}>{proj.title}</h3>
+                    <p style={{ color: '#94a3b8', fontSize: '1rem', lineHeight: '1.6', marginBottom: '2rem', flex: 1 }}>{proj.success}</p>
+                    <motion.button 
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      style={{ 
+                        background: 'transparent', 
+                        border: '2px solid var(--accent-color)', 
+                        padding: '1rem 2rem', 
+                        borderRadius: '50px', 
+                        color: 'var(--accent-color)', 
+                        cursor: 'pointer', 
+                        display: 'flex', 
+                        alignItems: 'center', 
+                        justifyContent: 'center',
+                        gap: '10px', 
+                        transition: 'all 0.3s ease', 
+                        fontWeight: '800', 
+                        textTransform: 'uppercase', 
+                        letterSpacing: '2px'
+                      }} 
+                      onMouseOver={(e) => { e.currentTarget.style.background = 'var(--accent-color)'; e.currentTarget.style.color = '#000'; }} 
+                      onMouseOut={(e) => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = 'var(--accent-color)'; }}
+                    >
+                      View Mission <span>→</span>
+                    </motion.button>
                   </div>
-                </div>
+                </motion.div>
               ))}
             </motion.div>
           )}
@@ -105,24 +136,36 @@ export default function Projects() {
               style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: '2rem' }}
             >
               {content.certificates.map(cert => (
-                <div key={cert.id} style={{ 
-                  background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '24px', padding: '1rem', display: 'flex', flexDirection: 'column' 
-                }}>
+                <motion.div 
+                  key={cert.id} 
+                  whileHover={{ y: -10, boxShadow: '0 20px 40px rgba(255, 234, 0, 0.15)' }}
+                  style={{ 
+                    background: 'rgba(15, 23, 42, 0.4)', 
+                    border: '1px solid rgba(255, 255, 255, 0.05)', 
+                    borderRadius: '24px', 
+                    padding: '1.5rem', 
+                    display: 'flex', 
+                    flexDirection: 'column',
+                    transition: 'border 0.3s'
+                  }}
+                  onMouseOver={(e) => e.currentTarget.style.border = '1px solid rgba(255, 234, 0, 0.4)'}
+                  onMouseOut={(e) => e.currentTarget.style.border = '1px solid rgba(255, 255, 255, 0.05)'}
+                >
                   {/* Landscape Image */}
                   <div style={{ 
-                    height: '250px', background: '#0a0a0a', borderRadius: '16px', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px solid rgba(255,234,0,0.1)', overflow: 'hidden'
+                    height: '250px', background: 'rgba(0,0,0,0.6)', borderRadius: '16px', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px solid rgba(255, 255, 255, 0.05)', overflow: 'hidden'
                   }}>
                     {cert.image ? (
                       <img src={cert.image} alt={cert.title} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
                     ) : (
-                      <span style={{ color: '#333' }}>[Certificate Image]</span>
+                      <span style={{ color: '#475569', fontWeight: '600', letterSpacing: '1px' }}>[Certificate Image]</span>
                     )}
                   </div>
-                  <div style={{ padding: '1.5rem 1rem 0.5rem 1rem', textAlign: 'center' }}>
-                    <h3 style={{ color: '#fff', fontSize: '1.2rem', margin: '0 0 0.5rem 0' }}>{cert.title}</h3>
-                    <p style={{ color: '#ffea00', fontSize: '0.9rem', margin: 0, textTransform: 'uppercase', letterSpacing: '1px', fontWeight: 'bold' }}>{cert.issuer} • {cert.date}</p>
+                  <div style={{ padding: '1.5rem 0.5rem 0.5rem 0.5rem', textAlign: 'center' }}>
+                    <h3 style={{ color: '#fff', fontSize: '1.3rem', fontWeight: '800', margin: '0 0 0.8rem 0' }}>{cert.title}</h3>
+                    <p style={{ color: 'var(--accent-color)', fontSize: '0.9rem', margin: 0, textTransform: 'uppercase', letterSpacing: '2px', fontWeight: '800' }}>{cert.issuer} • {cert.date}</p>
                   </div>
-                </div>
+                </motion.div>
               ))}
             </motion.div>
           )}

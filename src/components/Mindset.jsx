@@ -4,33 +4,66 @@ import { content } from '../data/content';
 
 export default function Mindset() {
   return (
-    <section id="mindset" style={{ maxWidth: '800px', margin: '0 auto' }}>
-      <motion.h2 
-        initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-        style={{ color: 'var(--text-primary)', fontSize: 'clamp(2rem, 4vw, 3rem)', marginBottom: '3rem', textAlign: 'center', fontWeight: '900', textTransform: 'uppercase' }}
-      >
-        Mindset <span style={{ color: 'var(--accent-color)' }}>&</span> Attitude
-      </motion.h2>
+    <section id="mindset" style={{ 
+      maxWidth: '1200px', 
+      margin: '0 auto', 
+      padding: '100px 5%',
+      position: 'relative',
+      zIndex: 10
+    }}>
+      <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
+        <h2 style={{ fontSize: '3.5rem', fontWeight: '900', color: '#fff', margin: '0 0 1rem 0', textTransform: 'uppercase' }}>
+          Mindset <span style={{ color: 'var(--accent-color)' }}>& Attitude</span>
+        </h2>
+        <p style={{ color: '#94a3b8', fontSize: '1.2rem', letterSpacing: '1px' }}>How I approach problems and collaborate with others.</p>
+      </div>
       
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: '3rem', position: 'relative' }}>
+        
+        {/* Background glow lines can be added here if needed */}
+
         <motion.div 
           className="glass" 
-          style={{ padding: '2.5rem', borderRadius: '1rem', borderLeft: '4px solid var(--accent-color)', transition: 'all 0.3s ease' }} 
-          whileHover={{ x: 10, boxShadow: '0 10px 30px rgba(255, 234, 0, 0.1)' }}
-          whileInView={{ x: 0, opacity: 1 }} initial={{ x: -50, opacity: 0 }} viewport={{ once: true }}
+          style={{ 
+            padding: '3rem', 
+            borderRadius: '24px', 
+            borderTop: '4px solid var(--accent-color)', 
+            background: 'rgba(15, 23, 42, 0.5)',
+            boxShadow: '0 20px 40px rgba(0,0,0,0.5)',
+            position: 'relative',
+            overflow: 'hidden'
+          }} 
+          whileHover={{ y: -10, boxShadow: '0 30px 60px rgba(255, 234, 0, 0.15)' }}
+          whileInView={{ y: 0, opacity: 1 }} 
+          initial={{ y: 50, opacity: 0 }} 
+          viewport={{ once: true, amount: 0.2 }}
         >
-          <h4 style={{ fontSize: '1.4rem', marginTop: 0, color: 'var(--text-primary)', letterSpacing: '1px', textTransform: 'uppercase' }}>Conflict Resolution</h4>
-          <p style={{ color: 'var(--text-secondary)', lineHeight: '1.8', margin: 0 }}>{content.mindset.conflictResolution}</p>
+          <div style={{ position: 'absolute', top: '-20px', right: '-20px', fontSize: '8rem', color: 'rgba(255, 234, 0, 0.05)', fontWeight: '900', lineHeight: 1 }}>01</div>
+          <h4 style={{ fontSize: '1.8rem', marginTop: 0, color: '#fff', letterSpacing: '1px', textTransform: 'uppercase', fontWeight: '800' }}>Conflict Resolution</h4>
+          <p style={{ color: '#cbd5e1', lineHeight: '1.8', margin: 0, fontSize: '1.1rem' }}>{content.mindset.conflictResolution}</p>
         </motion.div>
 
         <motion.div 
           className="glass" 
-          style={{ padding: '2.5rem', borderRadius: '1rem', borderLeft: '4px solid #00e5ff', transition: 'all 0.3s ease' }} 
-          whileHover={{ x: 10, boxShadow: '0 10px 30px rgba(0, 229, 255, 0.1)' }}
-          whileInView={{ x: 0, opacity: 1 }} initial={{ x: -50, opacity: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }}
+          style={{ 
+            padding: '3rem', 
+            borderRadius: '24px', 
+            borderTop: '4px solid #00e5ff', 
+            background: 'rgba(15, 23, 42, 0.5)',
+            boxShadow: '0 20px 40px rgba(0,0,0,0.5)',
+            position: 'relative',
+            overflow: 'hidden',
+            marginTop: '3rem' // Stagger effect
+          }} 
+          whileHover={{ y: -10, boxShadow: '0 30px 60px rgba(0, 229, 255, 0.15)' }}
+          whileInView={{ y: 0, opacity: 1 }} 
+          initial={{ y: 50, opacity: 0 }} 
+          viewport={{ once: true, amount: 0.2 }} 
+          transition={{ delay: 0.2 }}
         >
-          <h4 style={{ fontSize: '1.4rem', marginTop: 0, color: 'var(--text-primary)', letterSpacing: '1px', textTransform: 'uppercase' }}>Tech Interest</h4>
-          <p style={{ color: 'var(--text-secondary)', lineHeight: '1.8', margin: 0 }}>{content.mindset.techInterest}</p>
+          <div style={{ position: 'absolute', top: '-20px', right: '-20px', fontSize: '8rem', color: 'rgba(0, 229, 255, 0.05)', fontWeight: '900', lineHeight: 1 }}>02</div>
+          <h4 style={{ fontSize: '1.8rem', marginTop: 0, color: '#fff', letterSpacing: '1px', textTransform: 'uppercase', fontWeight: '800' }}>Tech Interest</h4>
+          <p style={{ color: '#cbd5e1', lineHeight: '1.8', margin: 0, fontSize: '1.1rem' }}>{content.mindset.techInterest}</p>
         </motion.div>
       </div>
     </section>

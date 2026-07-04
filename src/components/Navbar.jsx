@@ -28,10 +28,10 @@ export default function Navbar() {
       }}
     >
       <div style={{ fontWeight: '900', fontSize: '1.5rem', letterSpacing: '1px', background: 'linear-gradient(90deg, #fff, #94a3b8)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
-        DII 9 Portfolio
+        BRUCE WAYNE
       </div>
       <div style={{ display: 'flex', gap: '3rem' }}>
-        {['Home', 'About', 'Portfolio', 'Mindset'].map((item) => (
+        {['Home', 'About', 'Portfolio', 'Mindset', 'Contact'].map((item) => (
           <motion.a 
             key={item}
             href={`#${item.toLowerCase() === 'home' ? 'hero' : item.toLowerCase()}`} 
