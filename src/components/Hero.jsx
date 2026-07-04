@@ -250,7 +250,7 @@ export default function Hero({ loading }) {
                 objectPosition: 'center',
                 filter: 'grayscale(70%) contrast(110%) brightness(90%)',
                 opacity: 0.9,
-                transform: 'scale(1.6)', // Zoom in to hide black bars
+                transform: 'scale(1.3)', // Zoom slightly to hide black bars without being too close
                 transformOrigin: 'center'
               }} 
             />
