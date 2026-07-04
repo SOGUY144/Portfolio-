@@ -11,10 +11,11 @@ export const content = {
   projects: [
     {
       id: 1,
-      title: "Project Alpha",
-      success: "Built a fully functional web application that served 100+ concurrent users.",
-      failure: "Initially failed to handle edge cases in UI which caused crashes on mobile.",
-      learning: "Learned the importance of user testing and robust error handling."
+      title: "Slip Sense Dashboard",
+      success: "A robust dashboard application hosted on Vercel for monitoring and analytics.",
+      failure: "Faced challenges with deployment and responsive design initially.",
+      learning: "Learned the intricacies of modern web deployment and mobile-first design.",
+      link: "https://slip-sense-gamma.vercel.app/dashboard"
     },
     {
       id: 2,

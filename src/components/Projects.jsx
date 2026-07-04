@@ -98,10 +98,14 @@ export default function Projects() {
                   <div style={{ padding: '2.5rem', flex: 1, display: 'flex', flexDirection: 'column' }}>
                     <h3 style={{ color: '#fff', fontSize: '1.6rem', fontWeight: '800', margin: '0 0 1rem 0' }}>{proj.title}</h3>
                     <p style={{ color: '#94a3b8', fontSize: '1rem', lineHeight: '1.6', marginBottom: '2rem', flex: 1 }}>{proj.success}</p>
-                    <motion.button 
+                    <motion.a 
+                      href={proj.link || "#"}
+                      target={proj.link ? "_blank" : "_self"}
+                      rel="noopener noreferrer"
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                       style={{ 
+                        textDecoration: 'none',
                         background: 'transparent', 
                         border: '2px solid var(--accent-color)', 
                         padding: '1rem 2rem', 
@@ -121,7 +125,7 @@ export default function Projects() {
                       onMouseOut={(e) => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = 'var(--accent-color)'; }}
                     >
                       View Mission <span>→</span>
-                    </motion.button>
+                    </motion.a>
                   </div>
                 </motion.div>
               ))}
