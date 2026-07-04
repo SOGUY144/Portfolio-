@@ -240,16 +240,24 @@ export default function Hero({ loading }) {
             <div style={{ position: 'absolute', bottom: 10, left: 10, width: 10, height: 10, borderBottom: '2px solid rgba(255,255,255,0.3)', borderLeft: '2px solid rgba(255,255,255,0.3)'}}></div>
             <div style={{ position: 'absolute', bottom: 10, right: 10, width: 10, height: 10, borderBottom: '2px solid rgba(255,255,255,0.3)', borderRight: '2px solid rgba(255,255,255,0.3)'}}></div>
 
-            <span style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.9rem', textAlign: 'center', padding: '1rem', letterSpacing: '1px' }}>
-              [รอใส่รูปภาพของคุณ]
-            </span>
+            <img 
+              src="/profile.png" 
+              alt="Profile" 
+              style={{ 
+                width: '100%', 
+                height: '100%', 
+                objectFit: 'cover', 
+                filter: 'grayscale(70%) contrast(110%) brightness(90%)',
+                opacity: 0.9
+              }} 
+            />
           </div>
 
           {/* Badge Info */}
           <div style={{ marginTop: 'auto', textAlign: 'center', width: '100%' }}>
             <h3 style={{ margin: '0 0 0.5rem 0', fontSize: '1.6rem', color: '#fff', letterSpacing: '1px', fontWeight: '800' }}>{content.hero.name}</h3>
             <div style={{ width: '100%', height: '1px', background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent)', margin: '0.8rem 0' }}></div>
-            <p style={{ margin: 0, fontSize: '0.85rem', color: '#38bdf8', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '2px' }}>
+            <p style={{ margin: 0, fontSize: '0.85rem', color: 'var(--accent-color)', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '2px' }}>
               Future DII 9
             </p>
           </div>
