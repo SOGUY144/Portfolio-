@@ -36,42 +36,42 @@ export const content = {
       title: "IT CLASH 69 (Multimedia Track)",
       issuer: "KMITL",
       date: "2026",
-      image: "/certificates/Certificate-ฟาฮัส ทรงนาศึก-IT CLASH 69 กิจกรรมการแข่งขันทักษะทางวิชาการ ความเชี่ยวชาญ และความคิดสร้างสรรค์ทางด้าน IT เข้าร่วมรอบชิงชนะเลิศ (Multimedia Track) (2).jpg"
+      image: "/certificates/cert1.jpg"
     },
     {
       id: 2,
       title: "Thailand Summer Jam 2026",
       issuer: "Thailand Summer Jam",
       date: "April 2026",
-      image: "/certificates/Fahat_TSJ2026 (1).png"
+      image: "/certificates/cert2.png"
     },
     {
       id: 3,
       title: "HackaTech Championship",
       issuer: "NEXTOPIA / KBTG",
       date: "2026",
-      image: "/certificates/Screenshot 2026-07-04 183830.png"
+      image: "/certificates/cert3.png"
     },
     {
       id: 4,
       title: "1st Runner-Up - GameJamX 5Years",
       issuer: "GameJamX",
       date: "April 2026",
-      image: "/certificates/a_a_2a_-a_a_2a_a_a_a-a_a_a_a_a_2a_a_a_ (1).png"
+      image: "/certificates/cert4.png"
     },
     {
       id: 5,
       title: "Global Game Jam 2026",
       issuer: "Global Game Jam",
       date: "2026",
-      image: "/certificates/temp_Fahat_GGJ2026 Certificate (1) (2).png"
+      image: "/certificates/cert5.png"
     },
     {
       id: 6,
       title: "1st Runner-Up - Game Dev Tournament",
       issuer: "Hamster Hub",
       date: "December 2025",
-      image: "/certificates/ได้ที่2.png"
+      image: "/certificates/cert6.png"
     }
   ],
   techStack: [
