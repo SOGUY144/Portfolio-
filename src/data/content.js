@@ -40,37 +40,37 @@ export const content = {
     },
     {
       id: 2,
-      title: "Certificate 2",
-      issuer: "Issuer",
+      title: "TSJ 2026 (Waiting for details)",
+      issuer: "TSJ",
       date: "2026",
       image: "/certificates/Fahat_TSJ2026 (1).png"
     },
     {
       id: 3,
-      title: "Certificate 3",
-      issuer: "Issuer",
+      title: "HackaTech Championship",
+      issuer: "NEXTOPIA / KBTG",
       date: "2026",
       image: "/certificates/Screenshot 2026-07-04 183830.png"
     },
     {
       id: 4,
-      title: "Certificate 4",
-      issuer: "Issuer",
-      date: "2026",
+      title: "1st Runner-Up - GameJamX 5Years",
+      issuer: "GameJamX",
+      date: "April 2026",
       image: "/certificates/a_a_2a_-a_a_2a_a_a_a-a_a_a_a_a_2a_a_a_ (1).png"
     },
     {
       id: 5,
-      title: "Certificate 5",
-      issuer: "Issuer",
+      title: "Global Game Jam 2026",
+      issuer: "Global Game Jam",
       date: "2026",
       image: "/certificates/temp_Fahat_GGJ2026 Certificate (1) (2).png"
     },
     {
       id: 6,
-      title: "Certificate 6",
-      issuer: "Issuer",
-      date: "2026",
+      title: "1st Runner-Up - Game Dev Tournament",
+      issuer: "Hamster Hub",
+      date: "December 2025",
       image: "/certificates/ได้ที่2.png"
     }
   ],
