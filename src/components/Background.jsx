@@ -101,25 +101,25 @@ function InteractiveScene() {
             />
           </mesh>
 
-        {/* Floating Element: Inner Dark Energy Ring */}
+        {/* Floating Element: Inner Bright Ring */}
         <mesh ref={ring1Ref}>
           <torusGeometry args={[4.8, 0.1, 16, 64]} />
           <meshPhysicalMaterial 
-            color="#000000" 
-            metalness={1}
-            roughness={0}
+            color="#ffffff" 
+            metalness={0.8}
+            roughness={0.1}
             clearcoat={1}
             envMapIntensity={2}
           />
         </mesh>
 
-        {/* Floating Element: Outer Dark Energy Ring */}
+        {/* Floating Element: Outer Bright Ring */}
         <mesh ref={ring2Ref} rotation={[Math.PI / 2, 0, 0]}>
           <torusGeometry args={[5.5, 0.05, 16, 64]} />
           <meshPhysicalMaterial 
-            color="#000000" 
-            metalness={1}
-            roughness={0}
+            color="#ffffff" 
+            metalness={0.8}
+            roughness={0.1}
             clearcoat={1}
             envMapIntensity={2}
           />
