@@ -76,7 +76,7 @@ export default function GlitchText({ text }) {
       }}
     >
       {displayText.map((item, i) => (
-        <span key={i} style={{ color: item.isGlitched ? '#ff0033' : 'inherit' }}>
+        <span key={i} style={{ color: item.isGlitched ? 'var(--accent-color)' : 'inherit' }}>
           {item.char}
         </span>
       ))}
