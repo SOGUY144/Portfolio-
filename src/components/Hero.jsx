@@ -65,9 +65,9 @@ export default function Hero({ loading }) {
             display: 'inline-block',
             marginTop: '0.2em',
             textTransform: 'uppercase',
-            letterSpacing: '4px',
-            textShadow: '3px 3px 0 var(--accent-color), 6px 6px 0 rgba(0,0,0,0.9), 0 0 20px rgba(255,255,255,0.2)',
-            fontFamily: "'Cinzel', serif"
+            letterSpacing: '8px',
+            textShadow: '0 0 10px rgba(255, 234, 0, 0.4), 0 0 30px rgba(255, 255, 255, 0.2)',
+            fontFamily: "'Orbitron', sans-serif"
           }}>
             <GlitchText text={content.hero.name} />
           </span>
