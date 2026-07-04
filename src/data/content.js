@@ -40,9 +40,9 @@ export const content = {
     },
     {
       id: 2,
-      title: "TSJ 2026 (Waiting for details)",
-      issuer: "TSJ",
-      date: "2026",
+      title: "Thailand Summer Jam 2026",
+      issuer: "Thailand Summer Jam",
+      date: "April 2026",
       image: "/certificates/Fahat_TSJ2026 (1).png"
     },
     {
