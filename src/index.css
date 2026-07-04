@@ -3,9 +3,9 @@
 :root {
   --text-primary: #ffffff;
   --text-secondary: #94a3b8;
-  --accent-color: #ff0040;
-  --glass-bg: rgba(10, 10, 20, 0.4);
-  --glass-border: rgba(255, 255, 255, 0.05);
+  --accent-color: #ffea00;
+  --glass-bg: rgba(5, 5, 5, 0.6);
+  --glass-border: rgba(255, 234, 0, 0.1);
 }
 
 body {
@@ -37,4 +37,34 @@ section {
   justify-content: center;
   position: relative;
   z-index: 10;
+}
+
+/* Custom Scrollbar (Batcomputer Style) */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050505; 
+  border-left: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #222; 
+  border-radius: 5px;
+  border: 2px solid #050505;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ffea00; 
+}
+
+/* Custom Text Selection */
+::selection {
+  background: #ffea00;
+  color: #000000;
+}
+::-moz-selection {
+  background: #ffea00;
+  color: #000000;
 }

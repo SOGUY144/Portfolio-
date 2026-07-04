@@ -24,15 +24,16 @@ export default function Contact() {
 
   const inputStyle = {
     width: '100%',
-    padding: '1rem 1.5rem',
-    background: 'rgba(15, 23, 42, 0.4)',
-    border: '1px solid rgba(255, 255, 255, 0.1)',
-    borderRadius: '12px',
+    padding: '1rem 0.5rem',
+    background: 'transparent',
+    border: 'none',
+    borderBottom: '2px solid rgba(255, 234, 0, 0.3)',
+    borderRadius: '0px',
     color: '#fff',
     fontSize: '1rem',
     outline: 'none',
     transition: 'all 0.3s ease',
-    marginBottom: '1.5rem',
+    marginBottom: '2rem',
     fontFamily: 'inherit'
   };
 
@@ -79,9 +80,8 @@ export default function Contact() {
             required
             style={inputStyle}
             whileFocus={{ 
-              boxShadow: '0 0 15px rgba(56, 189, 248, 0.5)',
-              borderColor: 'rgba(56, 189, 248, 0.8)',
-              background: 'rgba(15, 23, 42, 0.8)'
+              borderColor: 'var(--accent-color)',
+              boxShadow: '0 10px 10px -10px var(--accent-color)'
             }}
           />
 
@@ -93,9 +93,8 @@ export default function Contact() {
             required
             style={inputStyle}
             whileFocus={{ 
-              boxShadow: '0 0 15px rgba(56, 189, 248, 0.5)',
-              borderColor: 'rgba(56, 189, 248, 0.8)',
-              background: 'rgba(15, 23, 42, 0.8)'
+              borderColor: 'var(--accent-color)',
+              boxShadow: '0 10px 10px -10px var(--accent-color)'
             }}
           />
 
@@ -107,9 +106,8 @@ export default function Contact() {
             required
             style={{ ...inputStyle, resize: 'none' }}
             whileFocus={{ 
-              boxShadow: '0 0 15px rgba(56, 189, 248, 0.5)',
-              borderColor: 'rgba(56, 189, 248, 0.8)',
-              background: 'rgba(15, 23, 42, 0.8)'
+              borderColor: 'var(--accent-color)',
+              boxShadow: '0 10px 10px -10px var(--accent-color)'
             }}
           />
 
@@ -121,16 +119,18 @@ export default function Contact() {
             style={{
               width: '100%',
               padding: '1rem',
-              background: isSubmitted ? '#10b981' : (isSubmitting ? '#475569' : '#38bdf8'),
-              color: isSubmitted ? '#fff' : '#0f172a',
+              background: isSubmitted ? '#10b981' : (isSubmitting ? '#222' : 'var(--accent-color)'),
+              color: isSubmitted ? '#fff' : (isSubmitting ? '#666' : '#000'),
               border: 'none',
               borderRadius: '12px',
               fontSize: '1.1rem',
-              fontWeight: '700',
+              fontWeight: '900',
+              textTransform: 'uppercase',
+              letterSpacing: '1px',
               cursor: isSubmitting ? 'not-allowed' : 'pointer',
               boxShadow: isSubmitted 
                 ? '0 0 20px rgba(16, 185, 129, 0.6)' 
-                : (isSubmitting ? 'none' : '0 0 20px rgba(56, 189, 248, 0.4)'),
+                : (isSubmitting ? 'none' : '0 0 20px rgba(255, 234, 0, 0.4)'),
               transition: 'all 0.3s ease'
             }}
           >

@@ -19,18 +19,18 @@ export default function About() {
         transition={{ duration: 0.8 }}
         style={{ maxWidth: '800px' }}
       >
-        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem' }}>
-          <div style={{ width: '40px', height: '2px', background: '#38bdf8' }}></div>
-          <span style={{ color: '#38bdf8', letterSpacing: '2px', fontWeight: 'bold' }}>01 ABOUT ME</span>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', margin: '0 0 2rem 0' }}>
+          <div style={{ width: '40px', height: '2px', background: 'var(--accent-color)', boxShadow: '0 0 10px var(--accent-color)' }}></div>
+          <span style={{ color: 'var(--accent-color)', letterSpacing: '3px', fontWeight: '900', textTransform: 'uppercase', fontSize: '0.9rem' }}>01 ABOUT ME</span>
         </div>
         
-        <h2 style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', margin: '0 0 1.5rem 0', lineHeight: '1.1' }}>
+        <h2 style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', margin: '0 0 1.5rem 0', lineHeight: '1.1', fontWeight: '900', textTransform: 'uppercase' }}>
           Who is <br/>
-          <span style={{ color: '#ff0040' }}>{content.hero.name}?</span>
+          <span style={{ color: 'var(--accent-color)', textShadow: '0 0 20px rgba(255, 234, 0, 0.4)' }}>{content.hero.name}?</span>
         </h2>
         
-        <div className="glass" style={{ padding: '3rem', borderRadius: '1.5rem', marginTop: '2rem' }}>
-          <p style={{ fontSize: '1.2rem', color: 'var(--text-primary)', lineHeight: '1.8', margin: 0 }}>
+        <div className="glass" style={{ padding: '3rem', borderRadius: '1rem', marginTop: '2.5rem', borderLeft: '4px solid var(--accent-color)' }}>
+          <p style={{ fontSize: '1.15rem', color: 'var(--text-secondary)', lineHeight: '1.8', margin: 0, fontWeight: '400' }}>
             {content.about.story}
           </p>
         </div>
