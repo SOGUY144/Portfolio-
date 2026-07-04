@@ -1,6 +1,6 @@
 import React, { useRef, useState, useMemo } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
-import { Stars, Float, Environment } from '@react-three/drei';
+import { Stars, Float, Environment, Sparkles } from '@react-three/drei';
 
 import * as THREE from 'three';
 import { SVGLoader } from 'three-stdlib';
@@ -129,7 +129,28 @@ function InteractiveScene() {
   );
 }
 
+function SweepingLights() {
+  const groupRef = useRef();
+  
+  useFrame((state) => {
+    const t = state.clock.getElapsedTime();
+    if (groupRef.current) {
+      // Create a sweeping searchlight effect by rotating the group containing spotlights
+      groupRef.current.rotation.x = Math.sin(t * 0.4) * 0.2;
+      groupRef.current.rotation.y = Math.sin(t * 0.5) * 0.6;
+      groupRef.current.rotation.z = Math.cos(t * 0.3) * 0.1;
+    }
+  });
 
+  return (
+    <group ref={groupRef} position={[0, -10, 2]}>
+      {/* Spotlight 1: Yellow Bat-signal style */}
+      <spotLight position={[-5, 0, 0]} angle={0.4} penumbra={1} intensity={5} color="#ffea00" distance={30} />
+      {/* Spotlight 2: White Police style */}
+      <spotLight position={[5, 0, 0]} angle={0.3} penumbra={1} intensity={4} color="#ffffff" distance={30} />
+    </group>
+  );
+}
 
 export default function Background() {
   return (
@@ -142,8 +163,14 @@ export default function Background() {
         
         <Environment preset="city" />
 
-        {/* Optimized Starfield serving as our cosmic background */}
+        {/* Optimized Starfield */}
         <Stars radius={100} depth={50} count={1000} factor={4} saturation={1} fade speed={1} />
+        
+        {/* Dark Embers / Data Dust */}
+        <Sparkles count={150} scale={15} size={2.5} speed={0.4} opacity={0.2} color="#ffea00" />
+        
+        {/* Sweeping Searchlights */}
+        <SweepingLights />
         
         <InteractiveScene />
       </Canvas>
