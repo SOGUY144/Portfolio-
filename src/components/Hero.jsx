@@ -60,22 +60,13 @@ export default function Hero({ loading }) {
         }}>
           Hi, I'm <br/>
           <span style={{ 
-            color: 'transparent', 
-            WebkitTextStroke: '2px rgba(255, 255, 255, 0.9)',
+            color: '#fff', 
             position: 'relative',
             display: 'inline-block',
-            marginTop: '0.2em'
+            marginTop: '0.2em',
+            textShadow: '0 0 20px rgba(255, 255, 255, 0.3)'
           }}>
             <GlitchText text={content.hero.name} />
-            {/* Soft glow behind the stroked text */}
-            <span style={{
-              position: 'absolute',
-              top: 0, left: 0, right: 0, bottom: 0,
-              color: 'transparent',
-              WebkitTextStroke: '2px rgba(255, 255, 255, 0.2)',
-              filter: 'blur(10px)',
-              zIndex: -1
-            }}><GlitchText text={content.hero.name} /></span>
           </span>
         </h1>
 
