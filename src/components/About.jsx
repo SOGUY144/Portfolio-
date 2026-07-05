@@ -1,10 +1,14 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
 import { content } from '../data/content';
+import BatWipe from './BatWipe';
 
 export default function About() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.3 });
+
   return (
-    <section id="about" style={{ 
+    <section ref={ref} id="about" style={{ 
       minHeight: '100vh', 
       display: 'flex',
       alignItems: 'center',
@@ -13,6 +17,7 @@ export default function About() {
       position: 'relative',
       zIndex: 10
     }}>
+      <BatWipe trigger={isInView} />
       <div style={{
         display: 'flex',
         flexDirection: 'row',
