@@ -19,15 +19,51 @@ export default function Hero({ loading }) {
   return (
     <section id="hero" style={{ 
       minHeight: '100vh', 
-      display: 'grid', 
-      gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-      gap: '4rem',
+      display: 'flex', 
       alignItems: 'center', 
-      padding: '0 10%', 
+      padding: '0', 
       pointerEvents: 'none',
       overflow: 'hidden',
       position: 'relative'
     }}>
+      {/* Diagonal Background Overlay */}
+      <motion.div 
+        initial={{ x: '-100%' }}
+        animate={loading ? { x: '-100%' } : { x: 0 }}
+        transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
+        style={{
+          position: 'absolute',
+          top: 0, left: 0, bottom: 0,
+          width: '60%',
+          background: 'rgba(5, 7, 15, 0.85)',
+          backdropFilter: 'blur(12px)',
+          clipPath: 'polygon(0 0, 100% 0, 80% 100%, 0% 100%)',
+          zIndex: 5,
+          borderRight: '1px solid rgba(255, 234, 0, 0.3)',
+          boxShadow: '10px 0 30px rgba(0,0,0,0.5)'
+        }}
+      >
+        {/* Glow edge line */}
+        <div style={{
+          position: 'absolute',
+          top: 0, right: 0, bottom: 0,
+          width: '2px',
+          background: 'linear-gradient(to bottom, transparent, var(--accent-color), transparent)',
+          boxShadow: '0 0 10px var(--accent-color)'
+        }} />
+      </motion.div>
+
+      {/* Content Wrapper */}
+      <div style={{
+        display: 'flex',
+        width: '100%',
+        padding: '0 8%',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        zIndex: 10,
+        flexWrap: 'wrap'
+      }}>
+
       {/* Left Side: Text Content */}
       <motion.div 
         initial="initial"
@@ -137,11 +173,12 @@ export default function Hero({ loading }) {
       </motion.div>
 
       {/* Right Side: The ID Badge */}
-      <div style={{ position: 'relative', height: '500px', display: 'flex', justifyContent: 'center', pointerEvents: 'auto', zIndex: 10 }}>
+      <div style={{ position: 'relative', height: '500px', flex: '1', display: 'flex', justifyContent: 'flex-end', paddingRight: '2%', pointerEvents: 'auto', zIndex: 10 }}>
         <motion.div
-          initial={{ y: -1000, rotate: 0 }}
-          animate={loading ? { y: -1000, rotate: 0 } : { 
+          initial={{ y: 500, opacity: 0, rotate: 10 }}
+          animate={loading ? { y: 500, opacity: 0, rotate: 10 } : { 
             y: 0, 
+            opacity: 1,
             rotate: [-3, 3, -3] 
           }}
           transition={{
@@ -296,6 +333,9 @@ export default function Hero({ loading }) {
           </div>
         </motion.div>
         </motion.div>
+      </div>
+      
+      {/* Close Content Wrapper */}
       </div>
 
     </section>
