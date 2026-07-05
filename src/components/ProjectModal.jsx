@@ -92,7 +92,7 @@ export default function ProjectModal({ project, onClose }) {
           </div>
 
           {/* Links */}
-          <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginTop: 'auto' }}>
+          <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
             {project.githubLinks && project.githubLinks.map((link, idx) => (
               <a 
                 key={idx}
