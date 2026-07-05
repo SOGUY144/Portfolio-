@@ -92,7 +92,30 @@ export default function ProjectModal({ project, onClose }) {
           </div>
 
           {/* Links */}
-          <div style={{ display: 'flex', gap: '1.5rem' }}>
+          <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginTop: 'auto' }}>
+            {project.githubLinks && project.githubLinks.map((link, idx) => (
+              <a 
+                key={idx}
+                href={link.url} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                style={{
+                  flex: '1 1 calc(50% - 1rem)',
+                  padding: '1rem',
+                  textAlign: 'center',
+                  borderRadius: '50px',
+                  border: '1px solid rgba(255,255,255,0.2)',
+                  color: '#fff',
+                  textDecoration: 'none',
+                  fontWeight: '600',
+                  cursor: 'pointer',
+                  background: 'rgba(255,255,255,0.02)'
+                }}
+              >
+                {link.name}
+              </a>
+            ))}
+
             {project.githubLink && project.githubLink !== "#" && (
               <a 
                 href={project.githubLink} 

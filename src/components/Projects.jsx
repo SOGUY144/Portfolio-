@@ -30,7 +30,10 @@ const iconMap = {
   "React (Next.js)": "logos:nextjs-icon",
   "Map API (Google Maps)": "logos:google-maps",
   "AI Integration (Gemini AI)": "logos:google-gemini",
-  "Tailwind CSS": "vscode-icons:file-type-tailwind"
+  "Tailwind CSS": "vscode-icons:file-type-tailwind",
+  "Python": "logos:python",
+  "C#": "logos:c-sharp",
+  "Machine Learning": "carbon:machine-learning-model"
 };
 
 export default function Projects() {
