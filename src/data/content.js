@@ -119,6 +119,7 @@ export const content = {
       title: "IT CLASH 69 (Multimedia Track)",
       issuer: "KMITL",
       date: "2026",
+      award: "เข้ารอบชิงชนะเลิศ",
       image: "/certificates/cert1.jpg"
     },
     {
@@ -126,6 +127,7 @@ export const content = {
       title: "Thailand Summer Jam 2026",
       issuer: "Thailand Summer Jam",
       date: "April 2026",
+      award: "อันดับที่ 40 จาก 80 ทีม",
       image: "/certificates/cert2.png"
     },
     {
@@ -133,6 +135,7 @@ export const content = {
       title: "HackaTech Championship",
       issuer: "NEXTOPIA / KBTG",
       date: "2026",
+      award: "รางวัลชนะเลิศ",
       image: "/certificates/cert3.png"
     },
     {
@@ -140,6 +143,7 @@ export const content = {
       title: "1st Runner-Up - GameJamX 5Years",
       issuer: "GameJamX",
       date: "April 2026",
+      award: "รองชนะเลิศอันดับ 1",
       image: "/certificates/cert4.png"
     },
     {
@@ -154,6 +158,7 @@ export const content = {
       title: "1st Runner-Up - Game Dev Tournament",
       issuer: "Hamster Hub",
       date: "December 2025",
+      award: "รองชนะเลิศอันดับ 1",
       image: "/certificates/cert6.png"
     },
     {

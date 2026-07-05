@@ -260,6 +260,11 @@ export default function Projects() {
                   <div style={{ padding: '1.5rem 0.5rem 0.5rem 0.5rem', textAlign: 'center' }}>
                     <h3 style={{ color: '#fff', fontSize: '1.3rem', fontWeight: '800', margin: '0 0 0.8rem 0' }}>{cert.title}</h3>
                     <p style={{ color: 'var(--accent-color)', fontSize: '0.9rem', margin: 0, textTransform: 'uppercase', letterSpacing: '2px', fontWeight: '800' }}>{cert.issuer} • {cert.date}</p>
+                    {cert.award && (
+                      <p style={{ color: '#4ade80', fontSize: '1rem', marginTop: '0.8rem', fontWeight: '600', textShadow: '0 2px 4px rgba(0,0,0,0.5)' }}>
+                        🏆 {cert.award}
+                      </p>
+                    )}
                   </div>
                 </motion.div>
               </BatFormationCard>
