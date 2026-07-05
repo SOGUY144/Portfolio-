@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
 
 export default function BatBurst({ active }) {
@@ -15,7 +15,7 @@ export default function BatBurst({ active }) {
   }, [active]);
 
   // Generate 35 bats with random properties
-  const bats = Array.from({ length: 35 }).map((_, i) => {
+  const bats = useMemo(() => Array.from({ length: 35 }).map((_, i) => {
     const angle = Math.random() * Math.PI * 2; // Random direction in radians
     const distance = 100 + Math.random() * 150; // Distance in vw/vh units
     
@@ -28,20 +28,20 @@ export default function BatBurst({ active }) {
     const scale = 0.5 + Math.random() * 2; // End scale
 
     return { id: i, destX, destY, delay, duration, scale };
-  });
+  }), []);
 
   if (!trigger) return null;
 
   return (
     <div style={{
-      position: 'absolute',
+      position: 'fixed',
       top: 0,
       left: 0,
-      width: '100%',
-      height: '100%',
+      width: '100vw',
+      height: '100vh',
       pointerEvents: 'none',
       overflow: 'hidden',
-      zIndex: 50 // Ensures bats fly over the content
+      zIndex: 9999 // Ensures bats fly over the content
     }}>
       {bats.map((bat) => (
         <motion.div
