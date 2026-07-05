@@ -24,7 +24,7 @@ export const content = {
         "Comprehensive Analytics Charts: กราฟวิเคราะห์กระแสเงินสดและพฤติกรรมการใช้จ่ายที่ดูง่ายและสวยงาม",
         "Secure Cloud Storage: ระบบจัดเก็บประวัติการทำธุรกรรมและรูปสลิปต้นฉบับอย่างปลอดภัยบนระบบคลาวด์"
       ],
-      githubLink: "#",
+      githubLink: "https://github.com/SOGUY144/SlipSense",
       liveLink: "https://slip-sense-gamma.vercel.app/dashboard",
       image: "/projects/slip_sense_real.png"
     },
