@@ -6,8 +6,8 @@ export default function BatWipe({ trigger }) {
   const bats = Array.from({ length: 25 }).map((_, i) => {
     const y = Math.random() * 100; // 0 to 100vh
     const delay = Math.random() * 0.4; // 0 to 0.4s delay for stagger
-    const duration = 0.8 + Math.random() * 0.6; // 0.8s to 1.4s travel time
-    const scale = 0.5 + Math.random() * 1.5; // size
+    const duration = 1.5 + Math.random() * 1.0; // 1.5s to 2.5s travel time
+    const scale = 1.2 + Math.random() * 1.8; // size
     
     // Y-wobble
     const yWobble = Math.random() * 40 - 20;
