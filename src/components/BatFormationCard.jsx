@@ -5,7 +5,7 @@ export default function BatFormationCard({ children, delay = 0 }) {
   const [showContent, setShowContent] = useState(false);
 
   // Generate bats that start from outside and converge to the center
-  const bats = useMemo(() => Array.from({ length: 25 }).map((_, i) => {
+  const bats = useMemo(() => Array.from({ length: 35 }).map((_, i) => {
     // Start them in a wide circle around the card
     const angle = Math.random() * Math.PI * 2;
     const distance = 300 + Math.random() * 400; // start 300-700px away
@@ -15,9 +15,11 @@ export default function BatFormationCard({ children, delay = 0 }) {
     // They will fly towards 0, 0
     const batDelay = delay + Math.random() * 0.4; // Stagger them
     const duration = 0.8 + Math.random() * 0.5; // Fast fly in
-    const scale = 0.5 + Math.random() * 1.5; 
+    const scale = 1.0 + Math.random() * 2.5; // Made bats larger
 
-    return { id: i, startX, startY, delay: batDelay, duration, scale, angle };
+    const flapDuration = 0.08 + Math.random() * 0.05; // Fast flap
+
+    return { id: i, startX, startY, delay: batDelay, duration, scale, angle, flapDuration };
   }), [delay]);
 
   useEffect(() => {
@@ -75,9 +77,18 @@ export default function BatFormationCard({ children, delay = 0 }) {
                 marginTop: '-15px'
               }}
             >
-              <svg xmlns="http://www.w3.org/2000/svg" width="60" height="30" viewBox="0 0 24 24">
-                 <path fill="#0a0a0a" stroke="#ffea00" strokeWidth="0.8" d="M.75 8S5 7 8 9c0 0 .5 3.75 2.5 3.75V11s.5 1 1.5 1s1.5-1 1.5-1v1.75C15.5 12.75 16 9 16 9c3-2 7.25-1 7.25-1c-2 1-2.25 4.5-2.25 4.5c-4 0-4 3.25-4 3.25c-5-1-5 2.75-5 2.75s0-3.75-5-2.75c0 0 0-3.25-4-3.25C3 12.5 2.75 9 .75 8" />
-              </svg>
+              <motion.div
+                animate={{ scaleY: [1, 0.3, 1] }}
+                transition={{ 
+                  repeat: Infinity, 
+                  duration: bat.flapDuration,
+                  ease: "easeInOut" 
+                }}
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="60" height="30" viewBox="0 0 24 24">
+                   <path fill="#0a0a0a" stroke="#ffea00" strokeWidth="0.8" d="M.75 8S5 7 8 9c0 0 .5 3.75 2.5 3.75V11s.5 1 1.5 1s1.5-1 1.5-1v1.75C15.5 12.75 16 9 16 9c3-2 7.25-1 7.25-1c-2 1-2.25 4.5-2.25 4.5c-4 0-4 3.25-4 3.25c-5-1-5 2.75-5 2.75s0-3.75-5-2.75c0 0 0-3.25-4-3.25C3 12.5 2.75 9 .75 8" />
+                </svg>
+              </motion.div>
             </motion.div>
           ))}
         </div>
