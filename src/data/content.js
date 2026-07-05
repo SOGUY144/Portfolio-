@@ -85,7 +85,7 @@ export const content = {
       modalImage: "/projects/coming_of_stages_modal.png"
     },
     {
-      id: 4,
+      id: 5,
       title: "GitHub Archives & Mini Projects",
       description: "คอลเลกชันรวมมินิโปรเจกต์และโค้ดต่างๆ ที่ผมเคยพัฒนาขึ้นมาเพื่อการศึกษาและทดลองเทคโนโลยีใหม่ๆ (ไม่ได้นำไป Deploy ขึ้นโฮสต์จริง) ซึ่งประกอบไปด้วยโปรเจกต์จากหลายภาษา ไม่ว่าจะเป็น Python, JavaScript, Machine Learning (DebtML) และ C# (SLOO)",
       technologies: ["Python", "JavaScript", "C#", "Machine Learning"],
