@@ -105,8 +105,8 @@ export const content = {
     }
   ],
   mindset: {
-    conflictResolution: "I believe in open communication, listening to all sides empathetically, and finding the root cause of the issue together to reach a consensus.",
-    techInterest: "I'm currently fascinated by AI integrations in daily workflows and how they improve productivity for non-technical users."
+    conflictResolution: "ผมเชื่อมั่นในการสื่อสารอย่างเปิดเผย การรับฟังทุกฝ่ายด้วยความเข้าใจ และการร่วมกันค้นหาต้นตอของปัญหาเพื่อหาข้อสรุปร่วมกัน",
+    techInterest: "ปัจจุบันผมให้ความสนใจอย่างมากเกี่ยวกับการนำ AI มาบูรณาการเข้ากับการทำงานในชีวิตประจำวัน และการใช้ AI เพื่อช่วยเพิ่มประสิทธิภาพการทำงานให้กับผู้ใช้งานทั่วไป"
   },
   contact: {
     github: "https://github.com/SOGUY144",

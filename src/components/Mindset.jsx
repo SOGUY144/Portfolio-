@@ -15,7 +15,7 @@ export default function Mindset() {
         <h2 style={{ fontSize: '3.5rem', fontWeight: '900', color: '#fff', margin: '0 0 1rem 0', textTransform: 'uppercase' }}>
           Mindset <span style={{ color: 'var(--accent-color)' }}>& Attitude</span>
         </h2>
-        <p style={{ color: '#94a3b8', fontSize: '1.2rem', letterSpacing: '1px' }}>How I approach problems and collaborate with others.</p>
+        <p style={{ color: '#94a3b8', fontSize: '1.2rem', letterSpacing: '1px' }}>แนวคิด วิธีการรับมือกับปัญหา และการทำงานร่วมกับผู้อื่น</p>
       </div>
       
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: '3rem', position: 'relative' }}>
@@ -39,7 +39,7 @@ export default function Mindset() {
           viewport={{ once: true, amount: 0.2 }}
         >
           <div style={{ position: 'absolute', top: '-20px', right: '-20px', fontSize: '8rem', color: 'rgba(255, 234, 0, 0.05)', fontWeight: '900', lineHeight: 1 }}>01</div>
-          <h4 style={{ fontSize: '1.8rem', marginTop: 0, color: '#fff', letterSpacing: '1px', textTransform: 'uppercase', fontWeight: '800' }}>Conflict Resolution</h4>
+          <h4 style={{ fontSize: '1.8rem', marginTop: 0, color: '#fff', letterSpacing: '1px', textTransform: 'uppercase', fontWeight: '800' }}>การจัดการความขัดแย้ง</h4>
           <p style={{ color: '#cbd5e1', lineHeight: '1.8', margin: 0, fontSize: '1.1rem' }}>{content.mindset.conflictResolution}</p>
         </motion.div>
 
@@ -62,7 +62,7 @@ export default function Mindset() {
           transition={{ delay: 0.2 }}
         >
           <div style={{ position: 'absolute', top: '-20px', right: '-20px', fontSize: '8rem', color: 'rgba(0, 229, 255, 0.05)', fontWeight: '900', lineHeight: 1 }}>02</div>
-          <h4 style={{ fontSize: '1.8rem', marginTop: 0, color: '#fff', letterSpacing: '1px', textTransform: 'uppercase', fontWeight: '800' }}>Tech Interest</h4>
+          <h4 style={{ fontSize: '1.8rem', marginTop: 0, color: '#fff', letterSpacing: '1px', textTransform: 'uppercase', fontWeight: '800' }}>ความสนใจด้านเทคโนโลยี</h4>
           <p style={{ color: '#cbd5e1', lineHeight: '1.8', margin: 0, fontSize: '1.1rem' }}>{content.mindset.techInterest}</p>
         </motion.div>
       </div>
