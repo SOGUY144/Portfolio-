@@ -48,8 +48,8 @@ export default function BatBurst({ active }) {
           key={bat.id}
           initial={{ x: '50vw', y: '50vh', scale: 0, opacity: 1, rotate: Math.atan2(bat.destY, bat.destX) * (180 / Math.PI) + 90 }}
           animate={{ 
-            x: `calc(50vw + ${bat.destX}vw)`, 
-            y: `calc(50vh + ${bat.destY}vh)`, 
+            x: `${50 + bat.destX}vw`, 
+            y: `${50 + bat.destY}vh`, 
             scale: bat.scale,
             opacity: [1, 1, 0] // Fade out at the end
           }}
