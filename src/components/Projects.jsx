@@ -22,7 +22,8 @@ const iconMap = {
   "OpenAI Vision": "logos:openai-icon",
   "Firebase": "logos:firebase",
   "Leaflet.js": "logos:leaflet",
-  "jsQR": "mdi:qrcode-scan"
+  "jsQR": "mdi:qrcode-scan",
+  "Node.js": "logos:nodejs-icon"
 };
 
 export default function Projects() {

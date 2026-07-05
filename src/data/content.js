@@ -71,15 +71,15 @@ export const content = {
       success: "Developed an engaging event enrollment platform for musicals.",
       failure: "Handled complex ticketing and user registration flows under high traffic.",
       learning: "Improved performance optimization and robust authentication systems.",
-      description: "The Coming of Stages is a dedicated enrollment and event management platform for the 'Hopemaker in Bloom' musical festival. It provides seamless ticket booking, QR code generation, and user account management.",
+      description: "The Coming of Stages คือแพลตฟอร์มจัดการอีเวนต์และระบบลงทะเบียนที่สร้างขึ้นมาสำหรับงานเทศกาลละครเวที 'Hopemaker in Bloom' โดยเฉพาะ ระบบถูกออกแบบมาเพื่อมอบประสบการณ์ที่ราบรื่น (Seamless) ให้กับผู้ใช้งาน ตั้งแต่การจองตั๋วเข้าร่วมกิจกรรม, การสร้างตั๋วแบบคิวอาร์โค้ด (QR Code), ไปจนถึงระบบจัดการบัญชีผู้ใช้งานที่ครบวงจร",
       technologies: ["React", "Next.js", "Tailwind", "Node.js"],
       features: [
-        "Event enrollment & ticketing",
-        "QR Code generation for tickets",
-        "Secure user authentication",
-        "Real-time availability tracking"
+        "Event enrollment & ticketing: ระบบลงทะเบียนเข้าร่วมกิจกรรมและจัดการการจองตั๋ว",
+        "QR Code generation for tickets: ระบบสร้าง QR Code อัตโนมัติเพื่อใช้เป็นตั๋วเข้างาน (E-Ticket)",
+        "Secure user authentication: ระบบสมัครสมาชิกและเข้าสู่ระบบที่มีความปลอดภัย",
+        "Real-time availability tracking: ระบบติดตามและอัปเดตจำนวนที่นั่ง/สิทธิ์ที่ว่างแบบเรียลไทม์"
       ],
-      githubLink: "#",
+      githubLink: "https://github.com/thecomingofstages/enroll-website",
       liveLink: "https://enroll.thecomingofstages.com/",
       image: "/projects/coming_of_stages.png",
       modalImage: "/projects/coming_of_stages_modal.png"
