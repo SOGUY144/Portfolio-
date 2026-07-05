@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;900&family=Prompt:wght@400;600;700;800&display=swap');
 
 :root {
   --text-primary: #ffffff;
@@ -10,7 +10,7 @@
 
 body {
   margin: 0;
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Outfit', 'Prompt', sans-serif;
   color: var(--text-primary);
   overflow-x: hidden;
   scroll-behavior: smooth;
