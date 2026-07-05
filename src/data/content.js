@@ -6,7 +6,7 @@ export const content = {
     tagline: "Software Developer | Tech Enthusiast",
   },
   about: {
-    story: "I am passionate about technology and solving real-world problems. I want to join DII Batch 9 because I believe in continuous learning and applying digital solutions to create meaningful impact.",
+    story: "ผมหลงใหลในเทคโนโลยีและการนำมาประยุกต์ใช้เพื่อแก้ปัญหาในชีวิตจริง ผมมีความตั้งใจอย่างยิ่งที่จะเข้าร่วมโครงการ DII Batch 9 เพราะผมเชื่อในพลังของการเรียนรู้อย่างต่อเนื่อง และต้องการพัฒนาทักษะเพื่อสร้างสรรค์นวัตกรรมดิจิทัลที่สามารถขับเคลื่อนสังคมให้ดีขึ้นได้อย่างแท้จริง",
   },
   projects: [
     {
