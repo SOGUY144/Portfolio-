@@ -5,7 +5,7 @@ export default function BatFormationCard({ children, delay = 0 }) {
   const [showContent, setShowContent] = useState(false);
 
   // Generate bats that start from outside and converge to the center
-  const bats = useMemo(() => Array.from({ length: 35 }).map((_, i) => {
+  const bats = useMemo(() => Array.from({ length: 18 }).map((_, i) => {
     // Start them in a wide circle around the card
     const angle = Math.random() * Math.PI * 2;
     const distance = 300 + Math.random() * 400; // start 300-700px away
@@ -13,11 +13,11 @@ export default function BatFormationCard({ children, delay = 0 }) {
     const startY = Math.sin(angle) * distance;
 
     // They will fly towards 0, 0
-    const batDelay = delay + Math.random() * 0.4; // Stagger them
-    const duration = 0.8 + Math.random() * 0.5; // Fast fly in
-    const scale = 1.0 + Math.random() * 2.5; // Made bats larger
+    const batDelay = delay + Math.random() * 0.3; // Stagger them
+    const duration = 0.8 + Math.random() * 0.6; // Smooth fly in
+    const scale = 1.0 + Math.random() * 2.0; // Keep bats large but slightly restrained
 
-    const flapDuration = 0.08 + Math.random() * 0.05; // Fast flap
+    const flapDuration = 0.15 + Math.random() * 0.1; // Slower, smoother flap (less CPU intensive)
 
     return { id: i, startX, startY, delay: batDelay, duration, scale, angle, flapDuration };
   }), [delay]);
@@ -74,7 +74,8 @@ export default function BatFormationCard({ children, delay = 0 }) {
                 position: 'absolute',
                 filter: 'drop-shadow(0 10px 10px rgba(0,0,0,0.8))',
                 marginLeft: '-30px', 
-                marginTop: '-15px'
+                marginTop: '-15px',
+                willChange: 'transform' // Hardware acceleration
               }}
             >
               <motion.div
