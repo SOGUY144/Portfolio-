@@ -166,6 +166,14 @@ export const content = {
       shortDescription: "เรื่องราวของ Hydro สสารรูปมนุษย์ที่ตื่นขึ้นมาเพื่อออกตามหาแหล่งน้ำที่หายไป บนโลกที่ร้อนดั่งเปลวเพลิง ตัวเกมเป็นแนว Side-scroller Shooter ที่สามารถใช้สกิลเกี่ยวกับน้ำรูปแบบต่างๆ ได้",
       itchLink: "https://punyapatchairat.itch.io/aquamata",
       image: "/projects/aquamata.png"
+    },
+    {
+      id: 3,
+      title: "DarkFlameMaster",
+      genre: ["3D", "Action", "Game Jam"],
+      shortDescription: "โปรเจกต์เกม 3D จากงาน ITCLASH69 Multimedia Jam ที่โดดเด่นด้วยธีมพลังแห่งเปลวเพลิงทมิฬ (Dark Flame) พัฒนาขึ้นร่วมกับทีมงานในระยะเวลาจำกัด",
+      itchLink: "https://soguy.itch.io/darkflamemaster",
+      image: "/projects/darkflamemaster.png"
     }
   ]
 };
