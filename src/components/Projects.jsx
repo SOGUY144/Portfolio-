@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Icon } from '@iconify/react';
 import { content } from '../data/content';
 import ProjectModal from './ProjectModal';
-import BatBurst from './BatBurst';
+import BatFormationCard from './BatFormationCard';
 
 // Mapping exact icon names for Tech Stack
 const iconMap = {
@@ -26,7 +26,6 @@ export default function Projects() {
 
   return (
     <section id="portfolio" style={{ maxWidth: '1200px', margin: '0 auto', padding: '100px 5%', position: 'relative', zIndex: 10 }}>
-      <BatBurst active={activeTab === 'Certificates'} />
       {/* Header */}
       <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
         <h2 style={{ fontSize: '3.5rem', fontWeight: '900', color: '#fff', margin: '0 0 1rem 0', textTransform: 'uppercase' }}>
@@ -161,12 +160,12 @@ export default function Projects() {
           {activeTab === 'Certificates' && (
             <motion.div 
               key="certs"
-              initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} transition={{ duration: 0.6, delay: 0.6 }}
+              initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} transition={{ duration: 0.3 }}
               style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: '2rem' }}
             >
-              {content.certificates.map(cert => (
-                <motion.div 
-                  key={cert.id} 
+              {content.certificates.map((cert, index) => (
+                <BatFormationCard key={cert.id} delay={index * 0.2}>
+                  <motion.div 
                   whileHover={{ y: -10, boxShadow: '0 20px 40px rgba(255, 234, 0, 0.15)' }}
                   style={{ 
                     background: 'rgba(15, 23, 42, 0.4)', 
@@ -195,8 +194,9 @@ export default function Projects() {
                     <p style={{ color: 'var(--accent-color)', fontSize: '0.9rem', margin: 0, textTransform: 'uppercase', letterSpacing: '2px', fontWeight: '800' }}>{cert.issuer} • {cert.date}</p>
                   </div>
                 </motion.div>
-              ))}
-            </motion.div>
+              </BatFormationCard>
+            ))}
+          </motion.div>
           )}
 
           {/* ================= TECH STACK TAB ================= */}
