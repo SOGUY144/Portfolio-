@@ -151,6 +151,7 @@ export const content = {
       title: "Global Game Jam 2026",
       issuer: "Global Game Jam",
       date: "2026",
+      award: "Top 10 Teams (อันดับที่ 10)",
       image: "/certificates/cert5.png"
     },
     {
