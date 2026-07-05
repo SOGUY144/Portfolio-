@@ -149,5 +149,15 @@ export const content = {
     { id: 8, name: "Next.js", color: "#ffffff" },
     { id: 9, name: "JavaScript", color: "#f7df1e" },
     { id: 10, name: "MySQL", color: "#4479a1" }
+  ],
+  games: [
+    {
+      id: 1,
+      title: "Micro-Immersive Sim",
+      genre: ["Immersive Sim", "Indie", "Pixel Art"],
+      shortDescription: "A bite-sized immersive sim experience where every choice matters.",
+      itchLink: "https://soguy.itch.io/micro-immersive-sim",
+      image: "/projects/micro_immersive_sim.png"
+    }
   ]
 };

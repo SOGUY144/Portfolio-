@@ -4,6 +4,7 @@ import { Icon } from '@iconify/react';
 import { content } from '../data/content';
 import ProjectModal from './ProjectModal';
 import BatFormationCard from './BatFormationCard';
+import GameStoreModal from './GameStoreModal';
 
 // Mapping exact icon names for Tech Stack
 const iconMap = {
@@ -33,7 +34,8 @@ const iconMap = {
 export default function Projects() {
   const [activeTab, setActiveTab] = useState('Projects');
   const [selectedProjectId, setSelectedProjectId] = useState(null);
-  const tabs = ['Projects', 'Certificates', 'Tech Stack'];
+  const [selectedGameId, setSelectedGameId] = useState(null);
+  const tabs = ['Projects', 'Games', 'Certificates', 'Tech Stack'];
 
   return (
     <section id="portfolio" style={{ maxWidth: '1200px', margin: '0 auto', padding: '100px 5%', position: 'relative', zIndex: 10 }}>
@@ -167,6 +169,53 @@ export default function Projects() {
             </motion.div>
           )}
 
+          {/* ================= GAMES TAB ================= */}
+          {activeTab === 'Games' && (
+            <motion.div 
+              key="games"
+              initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} transition={{ duration: 0.3 }}
+              style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '2rem' }}
+            >
+              {content.games && content.games.map(game => (
+                <motion.div 
+                  key={game.id} 
+                  whileHover={{ y: -10, boxShadow: '0 20px 40px rgba(255, 36, 73, 0.2)' }}
+                  onClick={() => setSelectedGameId(game.id)}
+                  style={{ 
+                    background: 'rgba(22, 25, 37, 0.8)', 
+                    border: '1px solid rgba(255, 255, 255, 0.05)', 
+                    borderRadius: '16px', 
+                    overflow: 'hidden',
+                    cursor: 'pointer',
+                    transition: 'border 0.3s'
+                  }}
+                  onMouseOver={(e) => e.currentTarget.style.border = '1px solid rgba(255, 36, 73, 0.5)'}
+                  onMouseOut={(e) => e.currentTarget.style.border = '1px solid rgba(255, 255, 255, 0.05)'}
+                >
+                  <div style={{ height: '200px', width: '100%', background: '#000', overflow: 'hidden' }}>
+                    {game.image ? (
+                      <img src={game.image} alt={game.title} style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.8, transition: 'opacity 0.3s, transform 0.5s' }} 
+                           onMouseOver={(e) => { e.currentTarget.style.opacity = 1; e.currentTarget.style.transform = 'scale(1.05)' }} 
+                           onMouseOut={(e) => { e.currentTarget.style.opacity = 0.8; e.currentTarget.style.transform = 'scale(1)' }}/>
+                    ) : (
+                      <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#444' }}>No Image</div>
+                    )}
+                  </div>
+                  <div style={{ padding: '1.5rem' }}>
+                    <h3 style={{ color: '#fff', fontSize: '1.5rem', fontWeight: '800', margin: '0 0 0.5rem 0' }}>{game.title}</h3>
+                    <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
+                      {game.genre && game.genre.map((tag, i) => (
+                        <span key={i} style={{ color: '#ff2449', fontSize: '0.8rem', fontWeight: '600', textTransform: 'uppercase' }}>
+                          {tag}{i < game.genre.length - 1 ? ' • ' : ''}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </motion.div>
+          )}
+
           {/* ================= CERTIFICATES TAB ================= */}
           {activeTab === 'Certificates' && (
             <motion.div 
@@ -243,6 +292,11 @@ export default function Projects() {
 
         </AnimatePresence>
       </div>
+      {/* Game Store Modal */}
+      <GameStoreModal 
+        game={selectedGameId ? content.games.find(g => g.id === selectedGameId) : null} 
+        onClose={() => setSelectedGameId(null)} 
+      />
     </section>
   );
 }
