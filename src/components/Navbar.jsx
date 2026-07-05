@@ -28,7 +28,7 @@ export default function Navbar() {
       }}
     >
       <div style={{ fontWeight: '900', fontSize: '1.5rem', letterSpacing: '1px', background: 'linear-gradient(90deg, #fff, #94a3b8)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
-        BRUCE WAYNE
+        PORTFOLIO
       </div>
       <div style={{ display: 'flex', gap: '3rem' }}>
         {['Home', 'About', 'Portfolio', 'Mindset', 'Contact'].map((item) => (
