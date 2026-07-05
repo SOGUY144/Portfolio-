@@ -136,6 +136,13 @@ export const content = {
       issuer: "Hamster Hub",
       date: "December 2025",
       image: "/certificates/cert6.png"
+    },
+    {
+      id: 7,
+      title: "HackaTech Accomplishment",
+      issuer: "NEXTOPIA / KBTG",
+      date: "2026",
+      image: "/certificates/cert7.jpg"
     }
   ],
   techStack: [
