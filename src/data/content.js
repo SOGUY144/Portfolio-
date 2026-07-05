@@ -158,6 +158,14 @@ export const content = {
       shortDescription: "A bite-sized immersive sim experience where every choice matters.",
       itchLink: "https://soguy.itch.io/micro-immersive-sim",
       image: "/projects/micro_immersive_sim.png"
+    },
+    {
+      id: 2,
+      title: "AquaMata",
+      genre: ["Side-Scroller", "Shooter", "Action", "Pixel Art"],
+      shortDescription: "เรื่องราวของ Hydro สสารรูปมนุษย์ที่ตื่นขึ้นมาเพื่อออกตามหาแหล่งน้ำที่หายไป บนโลกที่ร้อนดั่งเปลวเพลิง ตัวเกมเป็นแนว Side-scroller Shooter ที่สามารถใช้สกิลเกี่ยวกับน้ำรูปแบบต่างๆ ได้",
+      itchLink: "https://punyapatchairat.itch.io/aquamata",
+      image: "/projects/aquamata.png"
     }
   ]
 };
