@@ -15,13 +15,14 @@ export const content = {
       success: "A robust dashboard application hosted on Vercel for monitoring and analytics.",
       failure: "Faced challenges with deployment and responsive design initially.",
       learning: "Learned the intricacies of modern web deployment and mobile-first design.",
-      description: "Slip Sense is a comprehensive analytics dashboard designed to monitor transactions and verify payment slips in real-time. It features a modern, responsive UI built with cutting-edge web technologies, ensuring seamless access across all devices.",
-      technologies: ["React.js", "Tailwind", "Next.js"],
+      description: "SlipSense คือเว็บแอปพลิเคชันสำหรับจัดการด้านการเงินที่ออกแบบมาเพื่อพ่อค้าแม่ค้าออนไลน์และธุรกิจขนาดเล็กโดยเฉพาะ ขับเคลื่อนด้วยเทคโนโลยี Vision AI ที่สามารถอ่านและดึงข้อมูลจากสลิปโอนเงินหรือใบเสร็จได้โดยอัตโนมัติ ระบบจะช่วยจัดหมวดหมู่รายรับ-รายจ่าย และแสดงผลสรุปสุขภาพทางการเงินผ่าน Dashboard แบบเรียลไทม์ ตัวแอปพัฒนาด้วยเทคโนโลยีเว็บที่ทันสมัย มีดีไซน์ที่สวยงาม ใช้งานง่าย และรองรับการแสดงผลบนทุกอุปกรณ์ (Responsive Design)",
+      technologies: ["Next.js", "React.js", "Tailwind", "TypeScript", "Supabase", "OpenAI Vision"],
       features: [
-        "Real-time transaction monitoring",
-        "Responsive and elegant design",
-        "Comprehensive analytics charts",
-        "Secure user authentication"
+        "AI-Powered Slip Extraction: ระบบ AI สแกนและดึงข้อมูลจากสลิปโอนเงินหรือใบเสร็จได้อย่างแม่นยำอัตโนมัติ",
+        "Real-time Financial Dashboard: แดชบอร์ดสรุปยอดกำไรสุทธิ รายรับ และรายจ่ายของเดือนปัจจุบันแบบเรียลไทม์",
+        "Automated Categorization: ระบบช่วยวิเคราะห์และจัดหมวดหมู่รายรับ-รายจ่ายให้เหมาะสมกับประเภทธุรกิจ",
+        "Comprehensive Analytics Charts: กราฟวิเคราะห์กระแสเงินสดและพฤติกรรมการใช้จ่ายที่ดูง่ายและสวยงาม",
+        "Secure Cloud Storage: ระบบจัดเก็บประวัติการทำธุรกรรมและรูปสลิปต้นฉบับอย่างปลอดภัยบนระบบคลาวด์"
       ],
       githubLink: "#",
       liveLink: "https://slip-sense-gamma.vercel.app/dashboard",
