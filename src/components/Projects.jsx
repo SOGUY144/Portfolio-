@@ -35,6 +35,7 @@ export default function Projects() {
   const [activeTab, setActiveTab] = useState('Projects');
   const [selectedProjectId, setSelectedProjectId] = useState(null);
   const [selectedGameId, setSelectedGameId] = useState(null);
+  const [selectedCertImage, setSelectedCertImage] = useState(null);
   const tabs = ['Projects', 'Games', 'Certificates', 'Tech Stack'];
 
   return (
@@ -234,8 +235,10 @@ export default function Projects() {
                     padding: '1.5rem', 
                     display: 'flex', 
                     flexDirection: 'column',
-                    transition: 'border 0.3s'
+                    transition: 'border 0.3s',
+                    cursor: 'pointer'
                   }}
+                  onClick={() => cert.image && setSelectedCertImage(cert.image)}
                   onMouseOver={(e) => e.currentTarget.style.border = '1px solid rgba(255, 234, 0, 0.4)'}
                   onMouseOut={(e) => e.currentTarget.style.border = '1px solid rgba(255, 255, 255, 0.05)'}
                 >
@@ -297,6 +300,56 @@ export default function Projects() {
         game={selectedGameId ? content.games.find(g => g.id === selectedGameId) : null} 
         onClose={() => setSelectedGameId(null)} 
       />
+
+      {/* Certificate Lightbox Modal */}
+      <AnimatePresence>
+        {selectedCertImage && (
+          <div 
+            style={{ 
+              position: 'fixed', 
+              top: 0, left: 0, width: '100vw', height: '100vh', 
+              background: 'rgba(0, 0, 0, 0.9)', 
+              backdropFilter: 'blur(10px)',
+              zIndex: 10000, 
+              display: 'flex', alignItems: 'center', justifyContent: 'center',
+              cursor: 'zoom-out'
+            }}
+            onClick={() => setSelectedCertImage(null)}
+          >
+            <motion.img 
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.9 }}
+              transition={{ duration: 0.3, type: 'spring' }}
+              src={selectedCertImage}
+              alt="Certificate Fullscreen"
+              style={{
+                maxWidth: '90%',
+                maxHeight: '90%',
+                objectFit: 'contain',
+                borderRadius: '8px',
+                boxShadow: '0 20px 50px rgba(0,0,0,0.5)',
+                cursor: 'default'
+              }}
+              onClick={(e) => e.stopPropagation()}
+            />
+            <button 
+              onClick={() => setSelectedCertImage(null)}
+              style={{
+                position: 'absolute', top: '20px', right: '30px',
+                background: 'rgba(255,255,255,0.1)', color: '#fff', border: 'none',
+                width: '50px', height: '50px', borderRadius: '50%',
+                fontSize: '1.5rem', cursor: 'pointer', transition: 'background 0.2s',
+                display: 'flex', alignItems: 'center', justifyContent: 'center'
+              }}
+              onMouseOver={(e) => e.currentTarget.style.background = 'rgba(255,0,0,0.8)'}
+              onMouseOut={(e) => e.currentTarget.style.background = 'rgba(255,255,255,0.1)'}
+            >
+              ✕
+            </button>
+          </div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }
