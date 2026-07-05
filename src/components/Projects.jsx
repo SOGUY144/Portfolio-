@@ -16,9 +16,13 @@ const iconMap = {
   "Laravel": "logos:laravel",
   "Next.js": "logos:nextjs-icon",
   "JavaScript": "logos:javascript",
+  "Vanilla JavaScript": "logos:javascript",
   "MySQL": "logos:mysql-icon",
   "Supabase": "logos:supabase-icon",
-  "OpenAI Vision": "logos:openai-icon"
+  "OpenAI Vision": "logos:openai-icon",
+  "Firebase": "logos:firebase",
+  "Leaflet.js": "logos:leaflet",
+  "jsQR": "mdi:qrcode-scan"
 };
 
 export default function Projects() {

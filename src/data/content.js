@@ -34,15 +34,15 @@ export const content = {
       success: "Successfully deployed a decentralized or token-based web application.",
       failure: "Encountered state management complexities during the initial build phase.",
       learning: "Gained deep insights into tokenomics integration and scalable web architecture.",
-      description: "Loop to Token is an innovative web application designed to handle token transactions and reward loops. Built with a focus on seamless user experience, it features real-time data updates and a highly responsive interface.",
-      technologies: ["React", "Vite", "Tailwind", "Web3"],
+      description: "Loop to Token เป็นเว็บแอปพลิเคชันที่สร้างขึ้นเพื่อส่งเสริมการรีไซเคิลและลดปริมาณขยะ ผ่านการเปลี่ยนขยะพลาสติกให้เป็นคะแนนสะสม ผู้ใช้งานสามารถค้นหาตู้ทิ้งขยะอัจฉริยะ (Smart Bin) บนแผนที่, สแกน QR Code เพื่อรับคะแนน, และนำคะแนนไปแลกเป็นคูปองส่วนลดจากร้านค้าที่ร่วมรายการได้ทันที โดดเด่นด้วยการออกแบบ UI แบบ Glassmorphism ที่ทันสมัย และประสบการณ์ใช้งานที่ลื่นไหลบนทุกอุปกรณ์",
+      technologies: ["Vanilla JavaScript", "Firebase", "Leaflet.js", "jsQR"],
       features: [
-        "Token conversion mechanics",
-        "Real-time transaction tracking",
-        "Modern glassmorphism UI",
-        "Responsive cross-device design"
+        "In-Browser QR Scanner: ระบบเปิดกล้องสแกน QR Code ผ่านหน้าเว็บได้ทันที เพื่อยืนยันการรับคะแนนจากตู้ Smart Bin",
+        "Interactive Map System: แผนที่ค้นหาจุดทิ้งขยะอัจฉริยะ พร้อมหมุดที่ออกแบบพิเศษเพื่อให้ผู้ใช้ค้นหาสถานที่ใกล้ตัวได้อย่างรวดเร็ว",
+        "Reward & Point Tracking: ระบบบัญชีผู้ใช้สำหรับจัดการคะแนนสะสมแบบเรียลไทม์ และฟังก์ชันแลกคูปองส่วนลดจากร้านค้าพาร์ทเนอร์",
+        "Smart Database Fallback: ระบบจัดการข้อมูลอัจฉริยะที่สามารถทำงานผ่าน LocalDB ในเครื่องได้อัตโนมัติ หากเกิดข้อผิดพลาดในการเชื่อมต่อเซิร์ฟเวอร์หลัก"
       ],
-      githubLink: "#",
+      githubLink: "https://github.com/SOGUY144/loop-to-token",
       liveLink: "https://loop-to-token.vercel.app/",
       image: "/projects/loop_to_token_real.png",
       modalImage: "/projects/loop_to_token_modal.png"
