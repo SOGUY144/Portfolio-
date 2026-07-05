@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react';
+import { createPortal } from 'react-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Icon } from '@iconify/react';
 import { content } from '../data/content';
@@ -303,7 +304,7 @@ export default function Projects() {
 
       {/* Certificate Lightbox Modal */}
       <AnimatePresence>
-        {selectedCertImage && (
+        {selectedCertImage && createPortal(
           <div 
             style={{ 
               position: 'fixed', 
@@ -347,7 +348,8 @@ export default function Projects() {
             >
               ✕
             </button>
-          </div>
+          </div>,
+          document.body
         )}
       </AnimatePresence>
     </section>

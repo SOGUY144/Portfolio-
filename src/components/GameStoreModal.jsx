@@ -1,10 +1,11 @@
 import React from 'react';
+import { createPortal } from 'react-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export default function GameStoreModal({ game, onClose }) {
   if (!game) return null;
 
-  return (
+  return createPortal(
     <AnimatePresence>
       <div 
         style={{ 
@@ -162,6 +163,7 @@ export default function GameStoreModal({ game, onClose }) {
           </div>
         </motion.div>
       </div>
-    </AnimatePresence>
+    </AnimatePresence>,
+    document.body
   );
 }
