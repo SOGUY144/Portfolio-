@@ -129,6 +129,69 @@ function InteractiveScene() {
   );
 }
 
+function BatSwarm() {
+  const count = 25;
+  const groupRef = useRef();
+
+  const batShapes = useMemo(() => {
+    try {
+      const svgPath = "M.75 8S5 7 8 9c0 0 .5 3.75 2.5 3.75V11s.5 1 1.5 1s1.5-1 1.5-1v1.75C15.5 12.75 16 9 16 9c3-2 7.25-1 7.25-1c-2 1-2.25 4.5-2.25 4.5c-4 0-4 3.25-4 3.25c-5-1-5 2.75-5 2.75s0-3.75-5-2.75c0 0 0-3.25-4-3.25C3 12.5 2.75 9 .75 8";
+      const loader = new SVGLoader();
+      const data = loader.parse(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="${svgPath}"/></svg>`);
+      if (data.paths && data.paths.length > 0) {
+        return data.paths[0].toShapes(true);
+      }
+    } catch (e) {
+      console.error("SVG Parsing error:", e);
+    }
+    const shape = new THREE.Shape();
+    shape.moveTo(0, 0); shape.lineTo(0, 1); shape.lineTo(1, 1); shape.lineTo(1, 0); shape.lineTo(0, 0);
+    return [shape];
+  }, []);
+
+  const bats = useMemo(() => {
+    const temp = [];
+    for (let i = 0; i < count; i++) {
+      temp.push({
+        position: new THREE.Vector3((Math.random() - 0.5) * 40, (Math.random() - 0.5) * 20, (Math.random() - 0.5) * 15 - 5),
+        velocity: new THREE.Vector3((Math.random() - 0.5) * 0.03, (Math.random() - 0.5) * 0.02, 0),
+        scale: Math.random() * 0.015 + 0.005,
+        rotationSpeed: (Math.random() - 0.5) * 0.05,
+        flapSpeed: Math.random() * 10 + 5
+      });
+    }
+    return temp;
+  }, [count]);
+
+  useFrame((state) => {
+    const t = state.clock.getElapsedTime();
+    if (groupRef.current) {
+      groupRef.current.children.forEach((child, i) => {
+        const bat = bats[i];
+        child.position.add(bat.velocity);
+        child.rotation.y += bat.rotationSpeed;
+        child.rotation.z = Math.sin(t * bat.flapSpeed) * 0.2; // Wing flap
+
+        if (child.position.x > 20) child.position.x = -20;
+        if (child.position.x < -20) child.position.x = 20;
+        if (child.position.y > 15) child.position.y = -15;
+        if (child.position.y < -15) child.position.y = 15;
+      });
+    }
+  });
+
+  return (
+    <group ref={groupRef}>
+      {bats.map((bat, i) => (
+        <mesh key={i} position={bat.position} scale={bat.scale} rotation={[Math.PI, 0, 0]}>
+          <extrudeGeometry args={[batShapes, { depth: 0.2, bevelEnabled: false }]} onUpdate={(self) => self.center()} />
+          <meshBasicMaterial color="#000000" />
+        </mesh>
+      ))}
+    </group>
+  );
+}
+
 function SweepingLights() {
   const groupRef = useRef();
   
@@ -185,8 +248,11 @@ export default function Background() {
         <Stars radius={100} depth={50} count={1000} factor={4} saturation={1} fade speed={1} />
         
         {/* Dark Embers / Data Dust */}
-        <Sparkles count={150} scale={15} size={2.5} speed={0.4} opacity={0.2} color="#ffea00" />
+        <Sparkles count={200} scale={20} size={3} speed={0.6} opacity={0.3} color="#ffea00" />
         
+        {/* Bat Swarm Overlay */}
+        <BatSwarm />
+
         {/* Sweeping Searchlights */}
         <SweepingLights />
         
