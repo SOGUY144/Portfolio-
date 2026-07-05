@@ -23,7 +23,11 @@ const iconMap = {
   "Firebase": "logos:firebase",
   "Leaflet.js": "logos:leaflet",
   "jsQR": "mdi:qrcode-scan",
-  "Node.js": "logos:nodejs-icon"
+  "Node.js": "logos:nodejs-icon",
+  "React (Next.js)": "logos:nextjs-icon",
+  "Map API (Google Maps)": "logos:google-maps",
+  "AI Integration (Gemini AI)": "logos:google-gemini",
+  "Tailwind CSS": "vscode-icons:file-type-tailwind"
 };
 
 export default function Projects() {

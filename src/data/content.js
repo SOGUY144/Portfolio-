@@ -53,15 +53,15 @@ export const content = {
       success: "Successfully developed a smart route optimization system with AI.",
       failure: "Faced challenges in integrating the map API with AI routing algorithms.",
       learning: "Mastered geospatial data handling and AI-driven route calculations.",
-      description: "RouteWise AI is a smart route system designed for delivery teams. It integrates intelligent mapping and AI suggestions to optimize travel paths, reducing time and fuel consumption.",
-      technologies: ["React", "Map API", "AI Integration", "Tailwind"],
+      description: "RouteWise AI คือระบบจัดการเส้นทางอัจฉริยะที่ออกแบบมาเพื่อทีมขนส่งและโลจิสติกส์โดยเฉพาะ ผสมผสานเทคโนโลยีแผนที่ขั้นสูงเข้ากับปัญญาประดิษฐ์ (AI) เพื่อคำนวณและจัดวางเส้นทางการเดินทางที่ดีที่สุด ช่วยประหยัดเวลาในการทำงานและลดต้นทุนค่าน้ำมันได้อย่างมีประสิทธิภาพสูงสุด",
+      technologies: ["React (Next.js)", "Map API (Google Maps)", "AI Integration (Gemini AI)", "Tailwind CSS"],
       features: [
-        "Smart route optimization",
-        "Interactive mapping interface",
-        "AI-powered destination suggestions",
-        "Real-time driver tracking"
+        "✨ ระบบคำนวณและปรับแต่งเส้นทางอัจฉริยะ (Smart route optimization)",
+        "🗺️ อินเทอร์เฟซแผนที่แบบโต้ตอบใช้งานง่าย (Interactive mapping interface)",
+        "🤖 ระบบแนะนำจุดหมายและเส้นทางด้วย AI (AI-powered destination suggestions)",
+        "📍 การติดตามตำแหน่งคนขับแบบเรียลไทม์ (Real-time driver tracking)"
       ],
-      githubLink: "#",
+      githubLink: "https://github.com/maxsaidawat-cell/routewise-aii",
       liveLink: "https://routewise-aii-1ket.vercel.app/",
       image: "/projects/routewise.png"
     },
